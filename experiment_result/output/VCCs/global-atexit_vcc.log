@@ -1,0 +1,1165 @@
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 26 column 1 function main
+dereference failure, forgotten memory: symex_dynamic::dynamic_heap_3
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} goto_symex::guard?0!0&0#1 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+{-9} symex_dynamic::dynamic_heap_3&0#2 == (SAME-OBJECT((void *)(field_of
+  * type: pointer
+      * subtype: signedbv
+          * width: 32
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#4
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000), location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3) ? constant
+  * type: intheap : symex_dynamic::dynamic_heap_3&0#1)
+{-10} symex_dynamic::dynamic_heap_3&0#3 == (!goto_symex::guard?0!0&0#1 ? symex_dynamic::dynamic_heap_3&0#1 : symex_dynamic::dynamic_heap_3&0#2)
+{-11} symex_dynamic::dynamic_heap_3&0#4 == symex_dynamic::dynamic_heap_3&0#1
+{-12} symex_dynamic::dynamic_heap_1&0#6 == symex_dynamic::dynamic_heap_1&0#4
+{-13} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+{-14} symex_dynamic::dynamic_heap_3&0#5 == (SAME-OBJECT((void *)(field_of
+  * type: pointer
+      * subtype: signedbv
+          * width: 32
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#6
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000), location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3) ? constant
+  * type: intheap : symex_dynamic::dynamic_heap_3&0#4)
+{-15} symex_dynamic::dynamic_heap_3&0#6 == (!goto_symex::guard?0!0&0#2 ? symex_dynamic::dynamic_heap_3&0#4 : symex_dynamic::dynamic_heap_3&0#5)
+{-16} symex_dynamic::dynamic_heap_3&0#7 == (main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 ? symex_dynamic::dynamic_heap_3&0#3 : symex_dynamic::dynamic_heap_3&0#6)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 => symex_dynamic::dynamic_heap_3&0#7 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#1|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#4|)
+    (= |symex_dynamic::dynamic_heap_1&0#4| emp))
+(= (ite (= |smt_conv::smt_conv::_loaded_val_00|
+           |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+        emp
+        |symex_dynamic::dynamic_heap_3&0#1|)
+   |symex_dynamic::dynamic_heap_3&0#2|)
+(= (ite (not |goto_symex::guard?0!0&0#1|)
+        |symex_dynamic::dynamic_heap_3&0#1|
+        |symex_dynamic::dynamic_heap_3&0#2|)
+   |symex_dynamic::dynamic_heap_3&0#3|)
+(= |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_3&0#4|)
+(= |symex_dynamic::dynamic_heap_1&0#4| |symex_dynamic::dynamic_heap_1&0#6|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_10|))
+          |symex_dynamic::dynamic_heap_1&0#6|)
+    (= |symex_dynamic::dynamic_heap_1&0#6| emp))
+(= (ite (= |smt_conv::smt_conv::_loaded_val_10|
+           |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+        emp
+        |symex_dynamic::dynamic_heap_3&0#4|)
+   |symex_dynamic::dynamic_heap_3&0#5|)
+(= (ite (not |goto_symex::guard?0!0&0#2|)
+        |symex_dynamic::dynamic_heap_3&0#4|
+        |symex_dynamic::dynamic_heap_3&0#5|)
+   |symex_dynamic::dynamic_heap_3&0#6|)
+(= (ite |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|
+        |symex_dynamic::dynamic_heap_3&0#3|
+        |symex_dynamic::dynamic_heap_3&0#6|)
+   |symex_dynamic::dynamic_heap_3&0#7|)
+(let ((a!1 (=> true
+               (=> |execution_statet::\\guard_exec?0!0|
+                   (=> (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                       (= |symex_dynamic::dynamic_heap_3&0#7| emp))))))
+  (not a!1))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 26 column 1 function main
+dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#2 == (SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) ? constant
+  * type: intheap : symex_dynamic::dynamic_heap_1&0#1)
+{-4} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-5} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-6} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-7} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-8} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-9} symex_dynamic::dynamic_heap_1&0#5 == (SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) ? constant
+  * type: intheap : symex_dynamic::dynamic_heap_1&0#4)
+{-10} symex_dynamic::dynamic_heap_1&0#6 == symex_dynamic::dynamic_heap_1&0#4
+{-11} symex_dynamic::dynamic_heap_1&0#7 == (SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) ? constant
+  * type: intheap : symex_dynamic::dynamic_heap_1&0#6)
+{-12} symex_dynamic::dynamic_heap_1&0#8 == (main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 ? symex_dynamic::dynamic_heap_1&0#5 : symex_dynamic::dynamic_heap_1&0#7)
+{-13} symex_dynamic::dynamic_heap_1&0#9 == (main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 ? symex_dynamic::dynamic_heap_1&0#2 : symex_dynamic::dynamic_heap_1&0#8)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (1 => symex_dynamic::dynamic_heap_1&0#9 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= (ite (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+           |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+        emp
+        |symex_dynamic::dynamic_heap_1&0#1|)
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= (ite (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+           |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+        emp
+        |symex_dynamic::dynamic_heap_1&0#4|)
+   |symex_dynamic::dynamic_heap_1&0#5|)
+(= |symex_dynamic::dynamic_heap_1&0#4| |symex_dynamic::dynamic_heap_1&0#6|)
+(= (ite (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+           |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+        emp
+        |symex_dynamic::dynamic_heap_1&0#6|)
+   |symex_dynamic::dynamic_heap_1&0#7|)
+(= (ite |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|
+        |symex_dynamic::dynamic_heap_1&0#5|
+        |symex_dynamic::dynamic_heap_1&0#7|)
+   |symex_dynamic::dynamic_heap_1&0#8|)
+(= (ite |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|
+        |symex_dynamic::dynamic_heap_1&0#2|
+        |symex_dynamic::dynamic_heap_1&0#8|)
+   |symex_dynamic::dynamic_heap_1&0#9|)
+(let ((a!1 (=> true
+               (=> |execution_statet::\\guard_exec?0!0|
+                   (=> true (= |symex_dynamic::dynamic_heap_1&0#9| emp))))))
+  (not a!1))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 23 column 3 function main
+dereference failure: invalid free pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} symex_dynamic::dynamic_heap_1&0#6 == symex_dynamic::dynamic_heap_1&0#4
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && !main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#6 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#4| |symex_dynamic::dynamic_heap_1&0#6|)
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|))
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#6| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 21 column 5 function main
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} symex_dynamic::dynamic_heap_1&0#6 == symex_dynamic::dynamic_heap_1&0#4
+{-9} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && !main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 && goto_symex::guard?0!0&0#2 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#6 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#4| |symex_dynamic::dynamic_heap_1&0#6|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+                    |goto_symex::guard?0!0&0#2|)
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#6| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 21 column 5 function main
+dereference failure: invalid free pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} symex_dynamic::dynamic_heap_3&0#4 == symex_dynamic::dynamic_heap_3&0#1
+{-9} symex_dynamic::dynamic_heap_1&0#6 == symex_dynamic::dynamic_heap_1&0#4
+{-10} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && !main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 && goto_symex::guard?0!0&0#2 => !(SAME-OBJECT(field_of
+  * type: pointer
+      * subtype: signedbv
+          * width: 32
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#6
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3) && symex_dynamic::dynamic_heap_3&0#4 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_3&0#4|)
+(= |symex_dynamic::dynamic_heap_1&0#4| |symex_dynamic::dynamic_heap_1&0#6|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#6|)
+    (= |symex_dynamic::dynamic_heap_1&0#6| emp))
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+                    |goto_symex::guard?0!0&0#2|)
+               (not (and (= |smt_conv::smt_conv::_loaded_val_00|
+                            |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_3&0#4| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 21 column 5 function main
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} symex_dynamic::dynamic_heap_1&0#6 == symex_dynamic::dynamic_heap_1&0#4
+{-9} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && !main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 && goto_symex::guard?0!0&0#2 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#6 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#4| |symex_dynamic::dynamic_heap_1&0#6|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+                    |goto_symex::guard?0!0&0#2|)
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#6| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 16 column 3 function main
+dereference failure: invalid free pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#4 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#4| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 14 column 5 function main
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} goto_symex::guard?0!0&0#1 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 && goto_symex::guard?0!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#4 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#1|)
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|
+                    |goto_symex::guard?0!0&0#1|)
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#4| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 14 column 5 function main
+dereference failure: invalid free pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} goto_symex::guard?0!0&0#1 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 && goto_symex::guard?0!0&0#1 => !(SAME-OBJECT(field_of
+  * type: pointer
+      * subtype: signedbv
+          * width: 32
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#4
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3) && symex_dynamic::dynamic_heap_3&0#1 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#1|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#4|)
+    (= |symex_dynamic::dynamic_heap_1&0#4| emp))
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|
+                    |goto_symex::guard?0!0&0#1|)
+               (not (and (= |smt_conv::smt_conv::_loaded_val_00|
+                            |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_3&0#1| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 14 column 5 function main
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-5} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+{-6} symex_dynamic::dynamic_heap_1&0#4 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#3
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: location_of
+        * type: intloc
+        * operands: 
+          0: symbol
+              * type: intheap
+              * identifier: symex_dynamic::dynamic_heap_3&0#1
+{-7} main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 == nondet_symbol(symex::nondet3)
+{-8} goto_symex::guard?0!0&0#1 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 && main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1 && goto_symex::guard?0!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#4 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(= |symex_dynamic::dynamic_heap_1&0#3|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)))
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= |nondet$symex::nondet3|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#1|)
+(let ((a!1 (=> (and (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+                    |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1|
+                    |goto_symex::guard?0!0&0#1|)
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#4| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 11 column 2 function main
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+{-3} symex_dynamic::dynamic_heap_1&0#3 == symex_dynamic::dynamic_heap_1&0#1
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#3 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1| |symex_dynamic::dynamic_heap_1&0#3|)
+(let ((a!1 (=> (not |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#3| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file global-atexit.c line 7 column 3 function main
+dereference failure: invalid free pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 == nondet_symbol(symex::nondet1)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#1 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+       (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |nondet$symex::nondet1|
+   |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|)
+(let ((a!1 (=> |c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#1| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))

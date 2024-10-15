@@ -1,0 +1,847 @@
+
+VERIFICATION CONDITIONS:
+
+file test-0232-1.c line 26 column 1 function main
+dereference failure, forgotten memory: symex_dynamic::dynamic_heap_3
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+{-3} goto_symex::guard?0!0&0#1 == (field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000 != constant
+  * type: intloc
+  * value: 00000000)
+{-4} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (!goto_symex::guard?0!0&0#1 => symex_dynamic::dynamic_heap_3&0#1 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#2|)
+    (= |symex_dynamic::dynamic_heap_1&0#2| emp))
+(= (not (= |smt_conv::smt_conv::_loaded_val_00| nil))
+   |goto_symex::guard?0!0&0#1|)
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::20|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::30|)))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(let ((a!1 (=> true
+               (=> |execution_statet::\\guard_exec?0!0|
+                   (=> (not |goto_symex::guard?0!0&0#1|)
+                       (= |symex_dynamic::dynamic_heap_3&0#1| emp))))))
+  (not a!1))
+
+VERIFICATION CONDITIONS:
+
+file test-0232-1.c line 26 column 1 function main
+dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+{-3} goto_symex::guard?0!0&0#1 == (field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000 != constant
+  * type: intloc
+  * value: 00000000)
+{-4} append::$tmp::tmp$3?1!0&0#2 == (void *)symex::invalid_object0&0#0
+{-5} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-6} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+{-7} append::$tmp::tmp$3?1!0&0#5 == (goto_symex::guard?0!0&0#1 ? append::$tmp::tmp$3?1!0&0#2 : location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1)
+{-8} symex_dynamic::dynamic_heap_1&0#3 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000001
+    2: typecast
+        * type: pointer
+            * subtype: symbol
+                * identifier: tag-struct item
+        * operands: 
+          0: symbol
+              * type: pointer
+                  * subtype: empty
+              * identifier: c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5
+        * rounding_mode: constant
+            * type: signedbv
+                * width: 32
+            * value: 00000000000000000000000000000000
+{-9} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+{-10} symex_dynamic::dynamic_heap_1&0#4 == (SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) ? constant
+  * type: intheap : symex_dynamic::dynamic_heap_1&0#3)
+{-11} symex_dynamic::dynamic_heap_1&0#5 == (!goto_symex::guard?0!0&0#2 ? symex_dynamic::dynamic_heap_1&0#3 : symex_dynamic::dynamic_heap_1&0#4)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (1 => symex_dynamic::dynamic_heap_1&0#5 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#2|)
+    (= |symex_dynamic::dynamic_heap_1&0#2| emp))
+(= (not (= |smt_conv::smt_conv::_loaded_val_00| nil))
+   |goto_symex::guard?0!0&0#1|)
+(= |symex::invalid_object0&0#0| |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#2|)
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::20|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::30|)))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#2|)
+(= (ite |goto_symex::guard?0!0&0#1|
+        |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#2|
+        |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+   |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5|)
+(= |symex_dynamic::dynamic_heap_1&0#2|
+   (uplus |smt_conv::smt_conv::_tmp_heap_10|
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_10|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_10|
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5|)))
+   |symex_dynamic::dynamic_heap_1&0#3|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(= (ite (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+           |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+        emp
+        |symex_dynamic::dynamic_heap_1&0#3|)
+   |symex_dynamic::dynamic_heap_1&0#4|)
+(= (ite (not |goto_symex::guard?0!0&0#2|)
+        |symex_dynamic::dynamic_heap_1&0#3|
+        |symex_dynamic::dynamic_heap_1&0#4|)
+   |symex_dynamic::dynamic_heap_1&0#5|)
+(let ((a!1 (=> true
+               (=> |execution_statet::\\guard_exec?0!0|
+                   (=> true (= |symex_dynamic::dynamic_heap_1&0#5| emp))))))
+  (not a!1))
+
+VERIFICATION CONDITIONS:
+
+file test-0232-1.c line 22 column 9 function main
+dereference failure: invalid free pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+{-3} goto_symex::guard?0!0&0#1 == (field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000 != constant
+  * type: intloc
+  * value: 00000000)
+{-4} append::$tmp::tmp$3?1!0&0#2 == (void *)symex::invalid_object0&0#0
+{-5} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-6} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+{-7} append::$tmp::tmp$3?1!0&0#5 == (goto_symex::guard?0!0&0#1 ? append::$tmp::tmp$3?1!0&0#2 : location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1)
+{-8} symex_dynamic::dynamic_heap_1&0#3 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000001
+    2: typecast
+        * type: pointer
+            * subtype: symbol
+                * identifier: tag-struct item
+        * operands: 
+          0: symbol
+              * type: pointer
+                  * subtype: empty
+              * identifier: c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5
+        * rounding_mode: constant
+            * type: signedbv
+                * width: 32
+            * value: 00000000000000000000000000000000
+{-9} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (goto_symex::guard?0!0&0#2 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#3 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#2|)
+    (= |symex_dynamic::dynamic_heap_1&0#2| emp))
+(= (not (= |smt_conv::smt_conv::_loaded_val_00| nil))
+   |goto_symex::guard?0!0&0#1|)
+(= |symex::invalid_object0&0#0| |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#2|)
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::20|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::30|)))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#2|)
+(= (ite |goto_symex::guard?0!0&0#1|
+        |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#2|
+        |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+   |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5|)
+(= |symex_dynamic::dynamic_heap_1&0#2|
+   (uplus |smt_conv::smt_conv::_tmp_heap_10|
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_10|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_10|
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5|)))
+   |symex_dynamic::dynamic_heap_1&0#3|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(let ((a!1 (=> |goto_symex::guard?0!0&0#2|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#3| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file test-0232-1.c line 21 column 9 function main
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+{-3} goto_symex::guard?0!0&0#1 == (field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000 != constant
+  * type: intloc
+  * value: 00000000)
+{-4} append::$tmp::tmp$3?1!0&0#2 == (void *)symex::invalid_object0&0#0
+{-5} symex_dynamic::dynamic_heap_3&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+{-6} disjh
+  * type: bool
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1
+    1: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+{-7} append::$tmp::tmp$3?1!0&0#5 == (goto_symex::guard?0!0&0#1 ? append::$tmp::tmp$3?1!0&0#2 : location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_3&0#1)
+{-8} symex_dynamic::dynamic_heap_1&0#3 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000001
+    2: typecast
+        * type: pointer
+            * subtype: symbol
+                * identifier: tag-struct item
+        * operands: 
+          0: symbol
+              * type: pointer
+                  * subtype: empty
+              * identifier: c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5
+        * rounding_mode: constant
+            * type: signedbv
+                * width: 32
+            * value: 00000000000000000000000000000000
+{-9} goto_symex::guard?0!0&0#2 == (location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (goto_symex::guard?0!0&0#2 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#3 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#2|)
+    (= |symex_dynamic::dynamic_heap_1&0#2| emp))
+(= (not (= |smt_conv::smt_conv::_loaded_val_00| nil))
+   |goto_symex::guard?0!0&0#1|)
+(= |symex::invalid_object0&0#0| |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#2|)
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::20|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::30|)))
+   |symex_dynamic::dynamic_heap_3&0#1|)
+(disjh |symex_dynamic::dynamic_heap_3&0#1| |symex_dynamic::dynamic_heap_1&0#2|)
+(= (ite |goto_symex::guard?0!0&0#1|
+        |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#2|
+        |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)
+   |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5|)
+(= |symex_dynamic::dynamic_heap_1&0#2|
+   (uplus |smt_conv::smt_conv::_tmp_heap_10|
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_10|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_10|
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |c:test-0232-1.c@F@append::$tmp::tmp$3?1!0&0#5|)))
+   |symex_dynamic::dynamic_heap_1&0#3|)
+(= (not (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| nil))
+   |goto_symex::guard?0!0&0#2|)
+(let ((a!1 (=> |goto_symex::guard?0!0&0#2|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#3| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+file test-0232-1.c line 11 column 5 function append
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#2 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(let ((a!1 (=> |execution_statet::\\guard_exec?0!0|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#2| emp))))))
+  (not (=> true a!1)))
+
+VERIFICATION CONDITIONS:
+
+
+dereference failure: NULL pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+{-3} goto_symex::guard?0!0&0#1 == (field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (goto_symex::guard?0!0&0#1 => !(SAME-OBJECT(field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000, constant
+  * type: intloc
+  * value: 00000000)))
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#2|)
+    (= |symex_dynamic::dynamic_heap_1&0#2| emp))
+(= (not (= |smt_conv::smt_conv::_loaded_val_00| nil))
+   |goto_symex::guard?0!0&0#1|)
+(let ((a!1 (=> |execution_statet::\\guard_exec?0!0|
+               (=> |goto_symex::guard?0!0&0#1|
+                   (not (= |smt_conv::smt_conv::_loaded_val_00| nil))))))
+  (not (=> true a!1)))
+
+VERIFICATION CONDITIONS:
+
+
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+{-3} goto_symex::guard?0!0&0#1 == (field_of
+  * type: pointer
+      * subtype: symbol
+          * identifier: tag-struct item
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#2
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000 != constant
+  * type: intloc
+  * value: 00000000)
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => (goto_symex::guard?0!0&0#1 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#2 == constant
+  * type: intheap))
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(or (subh (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|))
+          |symex_dynamic::dynamic_heap_1&0#2|)
+    (= |symex_dynamic::dynamic_heap_1&0#2| emp))
+(= (not (= |smt_conv::smt_conv::_loaded_val_00| nil))
+   |goto_symex::guard?0!0&0#1|)
+(let ((a!1 (=> |goto_symex::guard?0!0&0#1|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#2| emp))))))
+  (not (=> true (=> |execution_statet::\\guard_exec?0!0| a!1))))
+
+VERIFICATION CONDITIONS:
+
+
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+{-2} symex_dynamic::dynamic_heap_1&0#2 == heap_update
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1
+    1: constant
+        * type: unsignedbv
+            * width: 64
+        * value: 0000000000000000000000000000000000000000000000000000000000000000
+    2: constant
+        * type: intloc
+        * value: 00000000
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#2 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(= |symex_dynamic::dynamic_heap_1&0#1|
+   (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|))))
+(= (uplus |smt_conv::smt_conv::_tmp_heap_00|
+          (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 nil)))
+   |symex_dynamic::dynamic_heap_1&0#2|)
+(let ((a!1 (=> |execution_statet::\\guard_exec?0!0|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#2| emp))))))
+  (not (=> true a!1)))
+
+VERIFICATION CONDITIONS:
+
+file test-0232-1.c line 10 column 5 function append
+dereference failure: invalid dereference pointer
+{-1} symex_dynamic::dynamic_heap_1&0#1 == heap_region
+  * type: intheap
+  * operands: 
+    0: symbol
+        * type: intloc
+        * identifier: symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+|--------------------------
+{1} execution_statet::\guard_exec?0!0 => !(SAME-OBJECT(location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1&0#1, location_of
+  * type: intloc
+  * operands: 
+    0: symbol
+        * type: intheap
+        * identifier: symex_dynamic::dynamic_heap_1) && symex_dynamic::dynamic_heap_1&0#1 == constant
+  * type: intheap)
+
+SMT formulas for VCCs:
+(= (uplus (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|))
+          (pt (locadd |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0| 1)
+              (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)))
+   |symex_dynamic::dynamic_heap_1&0#1|)
+(let ((a!1 (=> |execution_statet::\\guard_exec?0!0|
+               (not (and (= |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+                            |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|)
+                         (= |symex_dynamic::dynamic_heap_1&0#1| emp))))))
+  (not (=> true a!1)))

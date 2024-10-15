@@ -1,0 +1,474 @@
+ESBMC version 7.5.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with systemlibc
+Parsing ../slhv_experiment/bench-0125/cmp-freed-ptr-mutate.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.016s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __ESBMC_pthread_start_main_hook
+WARNING: no body for function __ESBMC_atexit_handler
+WARNING: no body for function __ESBMC_pthread_end_main_hook
+Symex completed in: 0.000s (27 assignments)
+Slicing time: 0.000s (removed 14 assignments)
+Generated 8 VCC(s), 5 remaining after simplification (13 assignments)
+Slicing time: 0.000s (removed 0 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 5 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file cmp-freed-ptr-mutate.c line 19 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_2
+Property: MEMORY_LEAK Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 6 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 4 with solver Z3-slhv
+Runtime decision procedure: 0.000s
+--------------------------------- Result -----------------------------------
+Location: file cmp-freed-ptr-mutate.c line 19 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+Property: MEMORY_LEAK Result: unsat Time: 0.000s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 1 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 8
+Number of aht: 7
+Number of locvars: 5
+begin generate deduced assumptions disj
+lia assertion size: 385
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 idj_7_3
+eval: false
+ constant 1 ish_0_6
+eval: false
+ constant 2 ish_3_2
+eval: true
+ constant 3 ish_5_4
+eval: false
+ constant 4 ish_3_4
+eval: false
+ constant 5 idj_7_0
+eval: false
+ constant 6 idj_5_5
+eval: false
+ constant 7 idj_6_0
+eval: false
+ constant 8 ish_2_2
+eval: true
+ constant 9 idj_3_1
+eval: false
+ constant 10 idj_5_1
+eval: false
+ constant 11 smt_conv::smt_conv::tmp_loc::10_intvar
+eval: 1
+ constant 12 idj_3_0
+eval: false
+ constant 13 ish_6_2
+eval: false
+ constant 14 f_th_boolvar0
+eval: true
+ constant 15 ish_4_3
+eval: false
+ constant 16 idj_7_7
+eval: false
+ constant 17 ish_4_5
+eval: false
+ constant 18 ish_4_7
+eval: false
+ constant 19 symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+eval: 1
+ constant 20 idj_3_6
+eval: false
+ constant 21 idj_0_0
+eval: false
+ constant 22 idj_1_5
+eval: false
+ constant 23 ish_1_1
+eval: true
+ constant 24 idj_4_6
+eval: false
+ constant 25 ish_7_2
+eval: true
+ constant 26 ish_7_6
+eval: false
+ constant 27 idj_5_2
+eval: true
+ constant 28 ish_1_0
+eval: true
+ constant 29 idj_1_4
+eval: false
+ constant 30 idj_7_5
+eval: false
+ constant 31 ish_3_7
+eval: false
+ constant 32 ish_6_3
+eval: false
+ constant 33 ish_4_2
+eval: true
+ constant 34 idj_5_6
+eval: false
+ constant 35 idj_3_7
+eval: false
+ constant 36 idj_5_3
+eval: false
+ constant 37 ish_1_4
+eval: false
+ constant 38 ish_5_7
+eval: false
+ constant 39 idj_6_7
+eval: false
+ constant 40 ish_5_0
+eval: false
+ constant 41 idj_1_7
+eval: false
+ constant 42 ish_1_2
+eval: false
+ constant 43 ish_3_3
+eval: true
+ constant 44 ish_3_5
+eval: false
+ constant 45 ish_5_3
+eval: false
+ constant 46 ish_4_4
+eval: true
+ constant 47 idj_4_0
+eval: false
+ constant 48 ish_0_1
+eval: true
+ constant 49 ish_0_0
+eval: true
+ constant 50 ish_6_6
+eval: true
+ constant 51 idj_5_0
+eval: false
+ constant 52 execution_statet::\guard_exec?0!0
+eval: true
+ constant 53 ish_7_7
+eval: true
+ constant 54 idj_0_4
+eval: false
+ constant 55 ish_0_5
+eval: false
+ constant 56 idj_1_1
+eval: false
+ constant 57 idj_6_5
+eval: false
+ constant 58 ish_6_1
+eval: false
+ constant 59 smt_conv::smt_conv::tmp_loc::00_intvar
+eval: 0
+ constant 60 ish_0_7
+eval: false
+ constant 61 idj_1_0
+eval: false
+ constant 62 ish_4_6
+eval: false
+ constant 63 idj_0_3
+eval: false
+ constant 64 idj_4_7
+eval: false
+ constant 65 ish_2_3
+eval: true
+ constant 66 ish_7_3
+eval: false
+ constant 67 idj_4_3
+eval: false
+ constant 68 ish_2_4
+eval: true
+ constant 69 ish_6_4
+eval: false
+ constant 70 ish_2_7
+eval: true
+ constant 71 idj_3_3
+eval: false
+ constant 72 idj_5_4
+eval: false
+ constant 73 idj_6_4
+eval: false
+ constant 74 idj_3_5
+eval: false
+ constant 75 ish_5_2
+eval: false
+ constant 76 idj_1_6
+eval: false
+ constant 77 idj_7_1
+eval: false
+ constant 78 ish_5_6
+eval: true
+ constant 79 ish_5_5
+eval: true
+ constant 80 idj_6_6
+eval: false
+ constant 81 ish_0_4
+eval: false
+ constant 82 idj_3_4
+eval: false
+ constant 83 ish_1_5
+eval: false
+ constant 84 idj_6_3
+eval: false
+ constant 85 idj_4_4
+eval: false
+ constant 86 symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+eval: 1
+ constant 87 ish_1_7
+eval: false
+ constant 88 ish_7_4
+eval: false
+ constant 89 idj_0_1
+eval: false
+ constant 90 idj_7_6
+eval: false
+ constant 91 idj_4_5
+eval: false
+ constant 92 ish_7_5
+eval: false
+ constant 93 idj_2_5
+eval: true
+ constant 94 idj_1_3
+eval: false
+ constant 95 ish_3_6
+eval: false
+ constant 96 ish_5_1
+eval: false
+ constant 97 ish_6_7
+eval: false
+ constant 98 goto_symex::guard?0!0&0#1
+eval: true
+ constant 99 ish_6_0
+eval: false
+ constant 100 idj_0_7
+eval: false
+ constant 101 ish_0_2
+eval: false
+ constant 102 idj_6_1
+eval: false
+ constant 103 ish_6_5
+eval: true
+ constant 104 idj_0_5
+eval: false
+ constant 105 idj_7_4
+eval: false
+ constant 106 ish_0_3
+eval: false
+ constant 107 idj_5_7
+eval: false
+ constant 108 idj_0_6
+eval: false
+ constant 109 idj_4_1
+eval: false
+ constant 110 ish_1_3
+eval: false
+ constant 111 ish_1_6
+eval: false
+translated model over
+===== valuation result:
+execution_statet::\guard_exec?0!0
+f_th_boolvar0
+goto_symex::guard?0!0&0#1
+idj_0_0
+idj_0_1
+idj_0_3
+idj_0_4
+idj_0_5
+idj_0_6
+idj_0_7
+idj_1_0
+idj_1_1
+idj_1_3
+idj_1_4
+idj_1_5
+idj_1_6
+idj_1_7
+idj_2_5
+idj_3_0
+idj_3_1
+idj_3_3
+idj_3_4
+idj_3_5
+idj_3_6
+idj_3_7
+idj_4_0
+idj_4_1
+idj_4_3
+idj_4_4
+idj_4_5
+idj_4_6
+idj_4_7
+idj_5_0
+idj_5_1
+idj_5_2
+idj_5_3
+idj_5_4
+idj_5_5
+idj_5_6
+idj_5_7
+idj_6_0
+idj_6_1
+idj_6_3
+idj_6_4
+idj_6_5
+idj_6_6
+idj_6_7
+idj_7_0
+idj_7_1
+idj_7_3
+idj_7_4
+idj_7_5
+idj_7_6
+idj_7_7
+ish_0_0
+ish_0_1
+ish_0_2
+ish_0_3
+ish_0_4
+ish_0_5
+ish_0_6
+ish_0_7
+ish_1_0
+ish_1_1
+ish_1_2
+ish_1_3
+ish_1_4
+ish_1_5
+ish_1_6
+ish_1_7
+ish_2_2
+ish_2_3
+ish_2_4
+ish_2_7
+ish_3_2
+ish_3_3
+ish_3_4
+ish_3_5
+ish_3_6
+ish_3_7
+ish_4_2
+ish_4_3
+ish_4_4
+ish_4_5
+ish_4_6
+ish_4_7
+ish_5_0
+ish_5_1
+ish_5_2
+ish_5_3
+ish_5_4
+ish_5_5
+ish_5_6
+ish_5_7
+ish_6_0
+ish_6_1
+ish_6_2
+ish_6_3
+ish_6_4
+ish_6_5
+ish_6_6
+ish_6_7
+ish_7_2
+ish_7_3
+ish_7_4
+ish_7_5
+ish_7_6
+ish_7_7
+smt_conv::smt_conv::tmp_loc::00_intvar
+int val for smt_conv::smt_conv::tmp_loc::00_intvar  val 0
+smt_conv::smt_conv::tmp_loc::00
+
+smt_conv::smt_conv::tmp_loc::10_intvar
+int val for smt_conv::smt_conv::tmp_loc::10_intvar  val 1
+smt_conv::smt_conv::tmp_loc::10
+
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0
+
+model info recorded: 
+model subsume info size: 4
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_2&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+locvar vals: 
+smt_conv::smt_conv::tmp_loc::00 0
+smt_conv::smt_conv::tmp_loc::10 1
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0 1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0 1
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 3 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file cmp-freed-ptr-mutate.c line 17 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: sat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 3 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 6
+Number of aht: 5
+Number of locvars: 5
+begin generate deduced assumptions disj
+lia assertion size: 222
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 2 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file cmp-freed-ptr-mutate.c line 15 column 9 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 7 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 3
+Number of aht: 2
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 27
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 1 with solver Z3-slhv
+Runtime decision procedure: 0.000s
+--------------------------------- Result -----------------------------------
+Location: file cmp-freed-ptr-mutate.c line 11 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.000s
+--------------------------------- Result -----------------------------------
+
+
+VERIFICATION FAILED

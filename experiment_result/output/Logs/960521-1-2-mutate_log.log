@@ -1,0 +1,505 @@
+ESBMC version 7.5.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with systemlibc
+Parsing ../slhv_experiment/bench-0125/960521-1-2-mutate.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.019s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __ESBMC_pthread_start_main_hook
+Unwinding loop 1 iteration 1   file 960521-1-2-mutate.c line 7 column 3 function foo
+Unwinding loop 1 iteration 2   file 960521-1-2-mutate.c line 7 column 3 function foo
+WARNING: no body for function __ESBMC_atexit_handler
+WARNING: no body for function __ESBMC_pthread_end_main_hook
+Symex completed in: 0.001s (52 assignments)
+Slicing time: 0.000s (removed 25 assignments)
+Generated 18 VCC(s), 12 remaining after simplification (27 assignments)
+Slicing time: 0.000s (removed 8 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 12 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 24 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_2
+Property: MEMORY_LEAK Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 7 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 11 with solver Z3-slhv
+Runtime decision procedure: 0.000s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 24 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+Property: MEMORY_LEAK Result: unsat Time: 0.000s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 11 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 8
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 1800
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 10 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 22 column 14 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 10 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 17
+Number of aht: 11
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 4875
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 9 with solver Z3-slhv
+Runtime decision procedure: 0.008s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 22 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.008s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 13 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 117
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 ish_0_4
+eval: false
+ constant 1 idj_2_2
+eval: false
+ constant 2 ish_3_2
+eval: false
+ constant 3 ish_3_4
+eval: false
+ constant 4 f_th_locvar0_intvar
+eval: 2
+ constant 5 idj_0_2
+eval: false
+ constant 6 idj_0_3
+eval: false
+ constant 7 ish_2_3
+eval: false
+ constant 8 ish_2_1
+eval: true
+ constant 9 ish_1_0
+eval: true
+ constant 10 ish_2_2
+eval: true
+ constant 11 idj_3_2
+eval: true
+ constant 12 ish_2_4
+eval: false
+ constant 13 goto_symex::guard?0!0&0#1
+eval: true
+ constant 14 ish_2_0
+eval: true
+ constant 15 ish_1_4
+eval: false
+ constant 16 ish_0_2
+eval: false
+ constant 17 idj_3_0
+eval: false
+ constant 18 symex::invalid_object0&0#0
+eval: (- 1)
+ constant 19 ish_3_1
+eval: true
+ constant 20 idj_3_3
+eval: false
+ constant 21 ish_3_0
+eval: true
+ constant 22 symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+eval: 1
+ constant 23 ish_0_3
+eval: false
+ constant 24 ish_3_3
+eval: true
+ constant 25 idj_2_3
+eval: true
+ constant 26 ish_1_2
+eval: false
+ constant 27 idj_2_0
+eval: false
+ constant 28 ish_4_4
+eval: true
+ constant 29 ish_0_1
+eval: true
+ constant 30 ish_0_0
+eval: true
+ constant 31 ish_1_1
+eval: true
+ constant 32 idj_0_0
+eval: false
+ constant 33 execution_statet::\guard_exec?0!0
+eval: true
+ constant 34 ish_1_3
+eval: false
+translated model over
+===== valuation result:
+execution_statet::\guard_exec?0!0
+f_th_locvar0_intvar
+int val for f_th_locvar0_intvar  val 2
+f_th_locvar0
+
+goto_symex::guard?0!0&0#1
+idj_0_0
+idj_0_2
+idj_0_3
+idj_2_0
+idj_2_2
+idj_2_3
+idj_3_0
+idj_3_2
+idj_3_3
+ish_0_0
+ish_0_1
+ish_0_2
+ish_0_3
+ish_0_4
+ish_1_0
+ish_1_1
+ish_1_2
+ish_1_3
+ish_1_4
+ish_2_0
+ish_2_1
+ish_2_2
+ish_2_3
+ish_2_4
+ish_3_0
+ish_3_1
+ish_3_2
+ish_3_3
+ish_3_4
+ish_4_4
+symex::invalid_object0&0#0
+int val for symex::invalid_object0&0#0  val -1
+symex::invalid_object0&0#0
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0
+
+model info recorded: 
+model subsume info size: 4
+------- main
+( |symex_dynamic::dynamic_heap_2&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- main
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- subs
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+locvar vals: 
+f_th_locvar0 2
+symex::invalid_object0&0#0 -1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0 1
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 8 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 20 column 14 function main
+Comment: Operand of free must have zero pointer offset
+Property: INVALID_FREE Result: sat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 12 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 11
+Number of aht: 7
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 1453
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 7 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 20 column 14 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 11 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 16
+Number of aht: 10
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 4163
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 6 with solver Z3-slhv
+Runtime decision procedure: 0.007s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 20 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.007s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 114
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 ish_0_4
+eval: true
+ constant 1 idj_3_4
+eval: false
+ constant 2 ish_3_2
+eval: false
+ constant 3 idj_4_4
+eval: false
+ constant 4 ish_3_4
+eval: true
+ constant 5 f_th_locvar0_intvar
+eval: 2
+ constant 6 idj_0_3
+eval: true
+ constant 7 ish_1_0
+eval: false
+ constant 8 idj_4_3
+eval: false
+ constant 9 ish_2_2
+eval: true
+ constant 10 ish_4_2
+eval: false
+ constant 11 idj_3_0
+eval: true
+ constant 12 ish_4_1
+eval: true
+ constant 13 ish_1_4
+eval: true
+ constant 14 ish_0_2
+eval: false
+ constant 15 ish_4_3
+eval: false
+ constant 16 ish_3_1
+eval: true
+ constant 17 idj_3_3
+eval: false
+ constant 18 ish_3_0
+eval: false
+ constant 19 symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+eval: 1
+ constant 20 ish_0_3
+eval: false
+ constant 21 ish_3_3
+eval: true
+ constant 22 ish_1_2
+eval: false
+ constant 23 ish_4_0
+eval: false
+ constant 24 ish_4_4
+eval: true
+ constant 25 ish_0_1
+eval: true
+ constant 26 idj_0_0
+eval: false
+ constant 27 ish_0_0
+eval: true
+ constant 28 ish_1_1
+eval: true
+ constant 29 execution_statet::\guard_exec?0!0
+eval: true
+ constant 30 idj_0_4
+eval: false
+ constant 31 idj_4_0
+eval: false
+ constant 32 ish_1_3
+eval: false
+translated model over
+===== valuation result:
+execution_statet::\guard_exec?0!0
+f_th_locvar0_intvar
+int val for f_th_locvar0_intvar  val 2
+f_th_locvar0
+
+idj_0_0
+idj_0_3
+idj_0_4
+idj_3_0
+idj_3_3
+idj_3_4
+idj_4_0
+idj_4_3
+idj_4_4
+ish_0_0
+ish_0_1
+ish_0_2
+ish_0_3
+ish_0_4
+ish_1_0
+ish_1_1
+ish_1_2
+ish_1_3
+ish_1_4
+ish_2_2
+ish_3_0
+ish_3_1
+ish_3_2
+ish_3_3
+ish_3_4
+ish_4_0
+ish_4_1
+ish_4_2
+ish_4_3
+ish_4_4
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0
+
+model info recorded: 
+model subsume info size: 4
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_2&0#1| | )
+------- subs
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- subs
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- main
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- subs
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+locvar vals: 
+f_th_locvar0 2
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0 1
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 5 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 19 column 3 function main
+Comment: dereference failure: Access of heap out of region
+Property: INVALID_DEREF Result: sat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 13 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 11
+Number of aht: 7
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 1450
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 4 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 19 column 3 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 13 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 11
+Number of aht: 7
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 1451
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 3 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 8 column 5 function foo
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 115
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 2 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 8 column 5 function foo
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 115
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 1 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-2-mutate.c line 17 column 3 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+
+VERIFICATION FAILED

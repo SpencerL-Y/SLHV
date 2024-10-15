@@ -1,0 +1,897 @@
+ESBMC version 7.5.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with systemlibc
+Parsing ../slhv_experiment/bench-0125/960521-1-1-mutate.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.020s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __ESBMC_pthread_start_main_hook
+WARNING: no body for function __ESBMC_atexit_handler
+WARNING: no body for function __ESBMC_pthread_end_main_hook
+Symex completed in: 0.000s (44 assignments)
+Slicing time: 0.001s (removed 21 assignments)
+Generated 14 VCC(s), 10 remaining after simplification (23 assignments)
+Slicing time: 0.000s (removed 6 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 10 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 15 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_2
+Property: MEMORY_LEAK Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 4 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 9 with solver Z3-slhv
+Runtime decision procedure: 0.000s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 15 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+Property: MEMORY_LEAK Result: unsat Time: 0.000s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 10 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 12
+Number of aht: 8
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 2634
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 ish_11_6
+eval: false
+ constant 1 idj_2_2
+eval: false
+ constant 2 ish_4_11
+eval: false
+ constant 3 smt_conv::smt_conv::tmp_val::00
+eval: (- 1)
+ constant 4 idj_8_2
+eval: false
+ constant 5 ish_5_4
+eval: false
+ constant 6 ish_9_6
+eval: false
+ constant 7 ish_9_7
+eval: true
+ constant 8 ish_0_8
+eval: false
+ constant 9 idj_7_0
+eval: false
+ constant 10 idj_7_2
+eval: false
+ constant 11 f_th_locvar1_intvar
+eval: 3
+ constant 12 idj_11_0
+eval: false
+ constant 13 idj_8_7
+eval: true
+ constant 14 ish_2_2
+eval: true
+ constant 15 idj_11_7
+eval: true
+ constant 16 ish_8_7
+eval: false
+ constant 17 ish_5_9
+eval: false
+ constant 18 ish_11_11
+eval: true
+ constant 19 ish_6_2
+eval: true
+ constant 20 ish_4_8
+eval: false
+ constant 21 idj_11_6
+eval: true
+ constant 22 ish_4_9
+eval: false
+ constant 23 idj_10_0
+eval: false
+ constant 24 idj_7_7
+eval: false
+ constant 25 idj_8_6
+eval: true
+ constant 26 ish_10_2
+eval: false
+ constant 27 ish_4_5
+eval: false
+ constant 28 symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+eval: 1
+ constant 29 idj_0_10
+eval: false
+ constant 30 ish_2_6
+eval: false
+ constant 31 idj_0_0
+eval: false
+ constant 32 ish_11_4
+eval: true
+ constant 33 idj_6_9
+eval: false
+ constant 34 idj_0_11
+eval: false
+ constant 35 idj_10_9
+eval: true
+ constant 36 idj_11_8
+eval: true
+ constant 37 idj_10_7
+eval: false
+ constant 38 ish_8_2
+eval: true
+ constant 39 ish_7_2
+eval: false
+ constant 40 ish_11_9
+eval: false
+ constant 41 idj_2_6
+eval: false
+ constant 42 idj_9_7
+eval: false
+ constant 43 ish_2_10
+eval: false
+ constant 44 ish_7_6
+eval: false
+ constant 45 ish_6_9
+eval: false
+ constant 46 smt_conv::smt_conv::_loaded_val_00
+eval: 0
+ constant 47 idj_9_10
+eval: true
+ constant 48 idj_9_8
+eval: true
+ constant 49 idj_9_2
+eval: false
+ constant 50 ish_1_0
+eval: true
+ constant 51 ish_6_3
+eval: false
+ constant 52 ish_4_2
+eval: false
+ constant 53 ish_11_2
+eval: true
+ constant 54 ish_8_4
+eval: true
+ constant 55 idj_6_7
+eval: false
+ constant 56 ish_5_0
+eval: false
+ constant 57 ish_6_11
+eval: false
+ constant 58 idj_9_0
+eval: false
+ constant 59 ish_8_3
+eval: false
+ constant 60 ish_11_0
+eval: true
+ constant 61 ish_4_4
+eval: true
+ constant 62 ish_0_1
+eval: true
+ constant 63 ish_8_8
+eval: true
+ constant 64 ish_7_7
+eval: true
+ constant 65 ish_6_10
+eval: false
+ constant 66 ish_0_5
+eval: false
+ constant 67 idj_8_11
+eval: true
+ constant 68 ish_4_6
+eval: false
+ constant 69 ish_1_11
+eval: false
+ constant 70 idj_2_11
+eval: false
+ constant 71 ish_8_0
+eval: true
+ constant 72 ish_8_5
+eval: true
+ constant 73 ish_7_3
+eval: false
+ constant 74 ish_10_3
+eval: false
+ constant 75 idj_2_7
+eval: false
+ constant 76 ish_2_4
+eval: false
+ constant 77 ish_10_10
+eval: true
+ constant 78 ish_2_7
+eval: false
+ constant 79 ish_7_1
+eval: true
+ constant 80 ish_9_10
+eval: false
+ constant 81 ish_2_9
+eval: false
+ constant 82 ish_11_7
+eval: false
+ constant 83 ish_10_7
+eval: false
+ constant 84 ish_7_8
+eval: false
+ constant 85 ish_5_2
+eval: true
+ constant 86 ish_9_8
+eval: false
+ constant 87 ish_5_6
+eval: false
+ constant 88 idj_6_6
+eval: false
+ constant 89 ish_0_4
+eval: true
+ constant 90 ish_1_5
+eval: false
+ constant 91 ish_1_7
+eval: false
+ constant 92 ish_7_4
+eval: true
+ constant 93 idj_7_6
+eval: false
+ constant 94 idj_8_8
+eval: false
+ constant 95 ish_7_5
+eval: false
+ constant 96 ish_2_1
+eval: false
+ constant 97 ish_5_1
+eval: false
+ constant 98 ish_10_5
+eval: true
+ constant 99 ish_0_9
+eval: false
+ constant 100 idj_0_8
+eval: false
+ constant 101 goto_symex::guard?0!0&0#1
+eval: false
+ constant 102 ish_6_0
+eval: false
+ constant 103 idj_2_8
+eval: false
+ constant 104 ish_6_5
+eval: true
+ constant 105 ish_0_3
+eval: false
+ constant 106 ish_9_1
+eval: true
+ constant 107 ish_9_9
+eval: true
+ constant 108 ish_10_1
+eval: true
+ constant 109 ish_7_11
+eval: false
+ constant 110 ish_9_4
+eval: true
+ constant 111 ish_0_11
+eval: false
+ constant 112 idj_11_9
+eval: true
+ constant 113 ish_0_6
+eval: false
+ constant 114 ish_7_10
+eval: false
+ constant 115 idj_7_8
+eval: true
+ constant 116 idj_9_6
+eval: false
+ constant 117 idj_7_11
+eval: true
+ constant 118 ish_10_6
+eval: false
+ constant 119 idj_6_0
+eval: false
+ constant 120 ish_11_8
+eval: false
+ constant 121 idj_2_9
+eval: false
+ constant 122 ish_4_1
+eval: false
+ constant 123 ish_11_10
+eval: true
+ constant 124 f_th_boolvar0
+eval: false
+ constant 125 ish_4_3
+eval: false
+ constant 126 idj_10_8
+eval: false
+ constant 127 idj_0_9
+eval: false
+ constant 128 ish_8_11
+eval: false
+ constant 129 ish_4_7
+eval: false
+ constant 130 idj_6_2
+eval: false
+ constant 131 idj_7_9
+eval: false
+ constant 132 ish_1_1
+eval: true
+ constant 133 smt_conv::smt_conv::_tmp_val_00
+eval: (- 1)
+ constant 134 ish_1_8
+eval: false
+ constant 135 ish_8_6
+eval: false
+ constant 136 idj_6_8
+eval: true
+ constant 137 ish_9_5
+eval: false
+ constant 138 ish_5_8
+eval: false
+ constant 139 ish_11_3
+eval: false
+ constant 140 ish_10_9
+eval: false
+ constant 141 ish_1_4
+eval: false
+ constant 142 ish_5_7
+eval: false
+ constant 143 ish_1_2
+eval: false
+ constant 144 ish_3_3
+eval: true
+ constant 145 ish_4_0
+eval: true
+ constant 146 idj_6_10
+eval: true
+ constant 147 ish_5_3
+eval: false
+ constant 148 ish_5_10
+eval: false
+ constant 149 ish_0_0
+eval: true
+ constant 150 ish_6_6
+eval: true
+ constant 151 ish_9_3
+eval: false
+ constant 152 execution_statet::\guard_exec?0!0
+eval: true
+ constant 153 ish_2_11
+eval: false
+ constant 154 idj_8_0
+eval: false
+ constant 155 idj_10_11
+eval: false
+ constant 156 idj_11_2
+eval: false
+ constant 157 ish_6_1
+eval: false
+ constant 158 ish_9_2
+eval: false
+ constant 159 ish_1_10
+eval: false
+ constant 160 idj_9_11
+eval: true
+ constant 161 ish_0_7
+eval: false
+ constant 162 ish_10_8
+eval: false
+ constant 163 idj_7_10
+eval: false
+ constant 164 ish_2_3
+eval: false
+ constant 165 idj_6_11
+eval: true
+ constant 166 ish_1_9
+eval: false
+ constant 167 ish_6_4
+eval: false
+ constant 168 idj_10_6
+eval: true
+ constant 169 idj_2_10
+eval: false
+ constant 170 ish_11_1
+eval: true
+ constant 171 idj_2_0
+eval: false
+ constant 172 ish_11_5
+eval: true
+ constant 173 ish_8_9
+eval: false
+ constant 174 ish_10_11
+eval: false
+ constant 175 ish_5_5
+eval: true
+ constant 176 ish_7_0
+eval: true
+ constant 177 f_th_locvar0_intvar
+eval: 2
+ constant 178 ish_8_10
+eval: true
+ constant 179 idj_0_2
+eval: false
+ constant 180 ish_7_9
+eval: true
+ constant 181 idj_11_10
+eval: false
+ constant 182 idj_8_9
+eval: true
+ constant 183 ish_6_7
+eval: false
+ constant 184 ish_9_11
+eval: false
+ constant 185 ish_4_10
+eval: false
+ constant 186 ish_0_10
+eval: false
+ constant 187 ish_2_0
+eval: false
+ constant 188 idj_10_10
+eval: false
+ constant 189 ish_0_2
+eval: false
+ constant 190 idj_0_7
+eval: false
+ constant 191 ish_6_8
+eval: false
+ constant 192 ish_8_1
+eval: true
+ constant 193 ish_2_5
+eval: true
+ constant 194 ish_5_11
+eval: false
+ constant 195 idj_8_10
+eval: false
+ constant 196 ish_2_8
+eval: false
+ constant 197 idj_11_11
+eval: false
+ constant 198 idj_0_6
+eval: false
+ constant 199 idj_10_2
+eval: false
+ constant 200 ish_9_0
+eval: true
+ constant 201 ish_1_3
+eval: false
+ constant 202 idj_9_9
+eval: false
+ constant 203 ish_1_6
+eval: false
+translated model over
+===== valuation result:
+execution_statet::\guard_exec?0!0
+f_th_boolvar0
+f_th_locvar0_intvar
+int val for f_th_locvar0_intvar  val 2
+f_th_locvar0
+
+f_th_locvar1_intvar
+int val for f_th_locvar1_intvar  val 3
+f_th_locvar1
+
+goto_symex::guard?0!0&0#1
+idj_0_0
+idj_0_10
+idj_0_11
+idj_0_2
+idj_0_6
+idj_0_7
+idj_0_8
+idj_0_9
+idj_10_0
+idj_10_10
+idj_10_11
+idj_10_2
+idj_10_6
+idj_10_7
+idj_10_8
+idj_10_9
+idj_11_0
+idj_11_10
+idj_11_11
+idj_11_2
+idj_11_6
+idj_11_7
+idj_11_8
+idj_11_9
+idj_2_0
+idj_2_10
+idj_2_11
+idj_2_2
+idj_2_6
+idj_2_7
+idj_2_8
+idj_2_9
+idj_6_0
+idj_6_10
+idj_6_11
+idj_6_2
+idj_6_6
+idj_6_7
+idj_6_8
+idj_6_9
+idj_7_0
+idj_7_10
+idj_7_11
+idj_7_2
+idj_7_6
+idj_7_7
+idj_7_8
+idj_7_9
+idj_8_0
+idj_8_10
+idj_8_11
+idj_8_2
+idj_8_6
+idj_8_7
+idj_8_8
+idj_8_9
+idj_9_0
+idj_9_10
+idj_9_11
+idj_9_2
+idj_9_6
+idj_9_7
+idj_9_8
+idj_9_9
+ish_0_0
+ish_0_1
+ish_0_10
+ish_0_11
+ish_0_2
+ish_0_3
+ish_0_4
+ish_0_5
+ish_0_6
+ish_0_7
+ish_0_8
+ish_0_9
+ish_10_1
+ish_10_10
+ish_10_11
+ish_10_2
+ish_10_3
+ish_10_5
+ish_10_6
+ish_10_7
+ish_10_8
+ish_10_9
+ish_11_0
+ish_11_1
+ish_11_10
+ish_11_11
+ish_11_2
+ish_11_3
+ish_11_4
+ish_11_5
+ish_11_6
+ish_11_7
+ish_11_8
+ish_11_9
+ish_1_0
+ish_1_1
+ish_1_10
+ish_1_11
+ish_1_2
+ish_1_3
+ish_1_4
+ish_1_5
+ish_1_6
+ish_1_7
+ish_1_8
+ish_1_9
+ish_2_0
+ish_2_1
+ish_2_10
+ish_2_11
+ish_2_2
+ish_2_3
+ish_2_4
+ish_2_5
+ish_2_6
+ish_2_7
+ish_2_8
+ish_2_9
+ish_3_3
+ish_4_0
+ish_4_1
+ish_4_10
+ish_4_11
+ish_4_2
+ish_4_3
+ish_4_4
+ish_4_5
+ish_4_6
+ish_4_7
+ish_4_8
+ish_4_9
+ish_5_0
+ish_5_1
+ish_5_10
+ish_5_11
+ish_5_2
+ish_5_3
+ish_5_4
+ish_5_5
+ish_5_6
+ish_5_7
+ish_5_8
+ish_5_9
+ish_6_0
+ish_6_1
+ish_6_10
+ish_6_11
+ish_6_2
+ish_6_3
+ish_6_4
+ish_6_5
+ish_6_6
+ish_6_7
+ish_6_8
+ish_6_9
+ish_7_0
+ish_7_1
+ish_7_10
+ish_7_11
+ish_7_2
+ish_7_3
+ish_7_4
+ish_7_5
+ish_7_6
+ish_7_7
+ish_7_8
+ish_7_9
+ish_8_0
+ish_8_1
+ish_8_10
+ish_8_11
+ish_8_2
+ish_8_3
+ish_8_4
+ish_8_5
+ish_8_6
+ish_8_7
+ish_8_8
+ish_8_9
+ish_9_0
+ish_9_1
+ish_9_10
+ish_9_11
+ish_9_2
+ish_9_3
+ish_9_4
+ish_9_5
+ish_9_6
+ish_9_7
+ish_9_8
+ish_9_9
+smt_conv::smt_conv::_loaded_val_00
+int val for smt_conv::smt_conv::_loaded_val_00  val 0
+smt_conv::smt_conv::_loaded_val_00
+smt_conv::smt_conv::_tmp_val_00
+int val for smt_conv::smt_conv::_tmp_val_00  val -1
+smt_conv::smt_conv::_tmp_val_00
+smt_conv::smt_conv::tmp_val::00
+int val for smt_conv::smt_conv::tmp_val::00  val -1
+smt_conv::smt_conv::tmp_val::00
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_2_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0
+
+model info recorded: 
+model subsume info size: 11
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0| (Pt_R_1 0)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0| (Pt_R_1 0)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- main
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- subs
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0| (Pt_R_1 0)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0| (Pt_R_1 0)) | )
+------- main
+( |symex_dynamic::dynamic_heap_2&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_2&0#2| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0| (Pt_R_1 0)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::tmp_val::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_2_loc&0#0|
+    (Pt_R_1 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt f_th_locvar0 (Pt_R_1 |smt_conv::smt_conv::tmp_val::10|)) | )
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- main
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+------- subs
+( (pt f_th_locvar1 (Pt_R_1 |smt_conv::smt_conv::tmp_val::20|)) | )
+locvar vals: 
+f_th_locvar0 2
+f_th_locvar1 3
+smt_conv::smt_conv::_loaded_val_00 0
+smt_conv::smt_conv::_tmp_val_00 -1
+smt_conv::smt_conv::tmp_val::00 -1
+symex_location::symex_dynamic::dynamic_heap_2_loc&0#0 1
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 8 with solver Z3-slhv
+Runtime decision procedure: 0.008s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 13 column 14 function main
+Comment: Operand of free must have zero pointer offset
+Property: INVALID_FREE Result: sat Time: 0.008s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 9 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 13
+Number of aht: 9
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 3206
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 7 with solver Z3-slhv
+Runtime decision procedure: 0.005s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 13 column 14 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.005s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 7 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 15
+Number of aht: 11
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 6275
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 6 with solver Z3-slhv
+Runtime decision procedure: 0.010s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 13 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.010s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 10 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 13
+Number of aht: 9
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 4428
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 5 with solver Z3-slhv
+Runtime decision procedure: 0.009s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 11 column 14 function main
+Comment: Operand of free must have zero pointer offset
+Property: INVALID_FREE Result: unsat Time: 0.009s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 10 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 8
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 2633
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 4 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 11 column 14 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 8 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 15
+Number of aht: 11
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 8291
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 3 with solver Z3-slhv
+Runtime decision procedure: 0.014s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 11 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.014s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 11 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 8
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 2630
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 2 with solver Z3-slhv
+Runtime decision procedure: 0.005s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 10 column 3 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.005s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 12 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 6
+Number of aht: 4
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 319
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 1 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file 960521-1-1-mutate.c line 9 column 3 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+
+VERIFICATION FAILED

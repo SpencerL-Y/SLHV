@@ -1,0 +1,197 @@
+ESBMC version 7.5.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with systemlibc
+Parsing ../slhv_experiment/bench-0125/test-0019-1.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.016s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __ESBMC_pthread_start_main_hook
+WARNING: no body for function __ESBMC_atexit_handler
+WARNING: no body for function __ESBMC_pthread_end_main_hook
+Symex completed in: 0.000s (37 assignments)
+Slicing time: 0.000s (removed 11 assignments)
+Generated 17 VCC(s), 10 remaining after simplification (26 assignments)
+Slicing time: 0.000s (removed 4 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 26
+Number of aht: 20
+Number of locvars: 19
+begin generate deduced assumptions disj
+lia assertion size: 59122
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 10 with solver Z3-slhv
+Runtime decision procedure: 0.179s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 17 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_3
+Property: MEMORY_LEAK Result: unsat Time: 0.179s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 4 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 26
+Number of aht: 20
+Number of locvars: 19
+begin generate deduced assumptions disj
+lia assertion size: 59122
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 9 with solver Z3-slhv
+Runtime decision procedure: 0.196s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 17 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_2
+Property: MEMORY_LEAK Result: unsat Time: 0.196s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 4 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 26
+Number of aht: 20
+Number of locvars: 19
+begin generate deduced assumptions disj
+lia assertion size: 59122
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 8 with solver Z3-slhv
+Runtime decision procedure: 0.182s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 17 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+Property: MEMORY_LEAK Result: unsat Time: 0.182s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 6 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 21
+Number of aht: 15
+Number of locvars: 17
+begin generate deduced assumptions disj
+lia assertion size: 19322
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 7 with solver Z3-slhv
+Runtime decision procedure: 0.030s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 15 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.030s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 6 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 23
+Number of aht: 17
+Number of locvars: 18
+begin generate deduced assumptions disj
+lia assertion size: 36604
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 6 with solver Z3-slhv
+Runtime decision procedure: 0.062s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 14 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.062s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 6 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 22
+Number of aht: 16
+Number of locvars: 18
+begin generate deduced assumptions disj
+lia assertion size: 26956
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 5 with solver Z3-slhv
+Runtime decision procedure: 0.046s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 13 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.046s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 9 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 21
+Number of aht: 15
+Number of locvars: 13
+begin generate deduced assumptions disj
+lia assertion size: 19312
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 4 with solver Z3-slhv
+Runtime decision procedure: 0.031s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 11 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.031s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 9 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 21
+Number of aht: 15
+Number of locvars: 13
+begin generate deduced assumptions disj
+lia assertion size: 19312
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 3 with solver Z3-slhv
+Runtime decision procedure: 0.026s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 10 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.026s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 12 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 13
+Number of aht: 9
+Number of locvars: 8
+begin generate deduced assumptions disj
+lia assertion size: 3216
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 2 with solver Z3-slhv
+Runtime decision procedure: 0.005s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 9 column 17 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.005s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 5
+begin generate deduced assumptions disj
+lia assertion size: 115
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 1 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0019-1.c line 8 column 17 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+BMC program time: 0.840s
+
+VERIFICATION SUCCESSFUL

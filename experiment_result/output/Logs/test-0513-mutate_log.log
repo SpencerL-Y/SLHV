@@ -1,0 +1,555 @@
+ESBMC version 7.5.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with systemlibc
+Parsing ../slhv_experiment/bench-0125/test-0513-mutate.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.016s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __ESBMC_pthread_start_main_hook
+WARNING: no body for function __ESBMC_atexit_handler
+WARNING: no body for function __ESBMC_pthread_end_main_hook
+Symex completed in: 0.001s (126 assignments)
+Slicing time: 0.001s (removed 38 assignments)
+Generated 63 VCC(s), 33 remaining after simplification (88 assignments)
+Slicing time: 0.000s (removed 12 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 75
+Number of aht: 54
+Number of locvars: 38
+begin generate deduced assumptions disj
+lia assertion size: 1857469
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 33 with solver Z3-slhv
+Runtime decision procedure: 9.799s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 64 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_6
+Property: MEMORY_LEAK Result: unsat Time: 9.799s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 4 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 92
+Number of aht: 67
+Number of locvars: 40
+begin generate deduced assumptions disj
+lia assertion size: 3827848
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 32 with solver Z3-slhv
+Runtime decision procedure: 23.341s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 64 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_4
+Property: MEMORY_LEAK Result: unsat Time: 23.341s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 7 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 87
+Number of aht: 62
+Number of locvars: 39
+begin generate deduced assumptions disj
+lia assertion size: 2853415
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 31 with solver Z3-slhv
+Runtime decision procedure: 16.785s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 61 column 9 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 16.785s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 8 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 87
+Number of aht: 62
+Number of locvars: 38
+begin generate deduced assumptions disj
+lia assertion size: 2853413
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 30 with solver Z3-slhv
+Runtime decision procedure: 15.229s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 60 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 15.229s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 43 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 40
+Number of aht: 27
+Number of locvars: 18
+begin generate deduced assumptions disj
+lia assertion size: 173027
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 13 with solver Z3-slhv
+Runtime decision procedure: 0.407s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 34 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.407s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 44 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Solving claim 12 with solver Z3-slhv
+Runtime decision procedure: 0.000s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 33 column 9 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.000s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 45 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 11 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 32 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 46 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 33
+Number of aht: 22
+Number of locvars: 16
+begin generate deduced assumptions disj
+lia assertion size: 87467
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 10 with solver Z3-slhv
+Runtime decision procedure: 0.180s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 32 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.180s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 46 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 33
+Number of aht: 22
+Number of locvars: 16
+begin generate deduced assumptions disj
+lia assertion size: 87467
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 9 with solver Z3-slhv
+Runtime decision procedure: 0.183s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 31 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.183s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 46 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 8 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 30 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 46 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 33
+Number of aht: 22
+Number of locvars: 16
+begin generate deduced assumptions disj
+lia assertion size: 87467
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 7 with solver Z3-slhv
+Runtime decision procedure: 0.190s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 30 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.190s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 46 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 33
+Number of aht: 22
+Number of locvars: 16
+begin generate deduced assumptions disj
+lia assertion size: 87467
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 6 with solver Z3-slhv
+Runtime decision procedure: 0.189s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 29 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.189s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 47 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 33
+Number of aht: 22
+Number of locvars: 15
+begin generate deduced assumptions disj
+lia assertion size: 87462
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 5 with solver Z3-slhv
+Runtime decision procedure: 0.181s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 28 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.181s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 53 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 11
+Number of aht: 7
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 1450
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 4 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 22 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 54 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 5
+begin generate deduced assumptions disj
+lia assertion size: 115
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 3 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 20 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 53 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 11
+Number of aht: 7
+Number of locvars: 5
+begin generate deduced assumptions disj
+lia assertion size: 1450
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 2 with solver Z3-slhv
+Runtime decision procedure: 0.002s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 18 column 23 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.002s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 54 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 5
+Number of aht: 3
+Number of locvars: 4
+begin generate deduced assumptions disj
+lia assertion size: 115
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 1 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 17 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 43 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 35
+Number of aht: 24
+Number of locvars: 20
+begin generate deduced assumptions disj
+lia assertion size: 136950
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 14 with solver Z3-slhv
+Runtime decision procedure: 0.308s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 36 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.308s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 43 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 35
+Number of aht: 24
+Number of locvars: 20
+begin generate deduced assumptions disj
+lia assertion size: 136950
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 15 with solver Z3-slhv
+Runtime decision procedure: 0.310s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 36 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.310s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 38 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Solving claim 16 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 37 column 17 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 42 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 17 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 38 column 17 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 37 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 43
+Number of aht: 30
+Number of locvars: 20
+begin generate deduced assumptions disj
+lia assertion size: 225132
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 18 with solver Z3-slhv
+Runtime decision procedure: 0.226s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 41 column 17 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.226s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 42 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 35
+Number of aht: 24
+Number of locvars: 20
+begin generate deduced assumptions disj
+lia assertion size: 136951
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 19 with solver Z3-slhv
+Runtime decision procedure: 0.307s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 42 column 17 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.307s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 34 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 54
+Number of aht: 37
+Number of locvars: 22
+begin generate deduced assumptions disj
+lia assertion size: 437400
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 20 with solver Z3-slhv
+Runtime decision procedure: 0.418s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 44 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.418s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 35 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 56
+Number of aht: 39
+Number of locvars: 30
+begin generate deduced assumptions disj
+lia assertion size: 693421
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 21 with solver Z3-slhv
+Runtime decision procedure: 2.057s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 44 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 2.057s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 34 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 35
+Number of aht: 24
+Number of locvars: 24
+begin generate deduced assumptions disj
+lia assertion size: 136963
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 22 with solver Z3-slhv
+Runtime decision procedure: 0.319s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 47 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.319s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 26 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 56
+Number of aht: 39
+Number of locvars: 29
+begin generate deduced assumptions disj
+lia assertion size: 628715
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 23 with solver Z3-slhv
+Runtime decision procedure: 1.813s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 47 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 1.813s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 29 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Solving claim 24 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 50 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 21 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 25 with solver Z3-slhv
+Runtime decision procedure: 0.002s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 50 column 13 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.002s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 17 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 70
+Number of aht: 49
+Number of locvars: 34
+begin generate deduced assumptions disj
+lia assertion size: 1303335
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 26 with solver Z3-slhv
+Runtime decision procedure: 6.826s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 54 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 6.826s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 72
+Number of aht: 51
+Number of locvars: 37
+begin generate deduced assumptions disj
+lia assertion size: 1532872
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 27 with solver Z3-slhv
+Runtime decision procedure: 7.924s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 56 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 7.924s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 72
+Number of aht: 51
+Number of locvars: 37
+begin generate deduced assumptions disj
+lia assertion size: 1532872
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 28 with solver Z3-slhv
+Runtime decision procedure: 8.275s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 57 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 8.275s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Solving claim 29 with solver Z3-slhv
+Runtime decision procedure: 0.002s
+--------------------------------- Result -----------------------------------
+Location: file test-0513-mutate.c line 60 column 9 function main
+Comment: dereference failure: NULL pointer
+Property: INVALID_DEREF Result: unsat Time: 0.002s
+--------------------------------- Result -----------------------------------
+
+BMC program time: 100.646s
+
+VERIFICATION SUCCESSFUL

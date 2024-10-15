@@ -1,0 +1,4742 @@
+ESBMC version 7.5.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with systemlibc
+Parsing ../slhv_experiment/bench-0125/global-atexit-5.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.016s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __ESBMC_pthread_start_main_hook
+WARNING: no body for function __ESBMC_atexit_handler
+WARNING: no body for function __ESBMC_pthread_end_main_hook
+Symex completed in: 0.000s (67 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 30 VCC(s), 16 remaining after simplification (39 assignments)
+Slicing time: 0.000s (removed 5 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 24
+Number of aht: 21
+Number of locvars: 10
+begin generate deduced assumptions disj
+lia assertion size: 26920
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 16 with solver Z3-slhv
+Runtime decision procedure: 0.068s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 30 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_3
+Property: MEMORY_LEAK Result: unsat Time: 0.068s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 9 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Solving claim 15 with solver Z3-slhv
+Runtime decision procedure: 0.000s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 30 column 1 function main
+Comment: dereference failure, forgotten memory: symex_dynamic::dynamic_heap_1
+Property: MEMORY_LEAK Result: unsat Time: 0.000s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 14
+Number of aht: 11
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2978
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 ish_11_6
+eval: false
+ constant 1 idj_7_3
+eval: false
+ constant 2 idj_2_2
+eval: false
+ constant 3 ish_4_11
+eval: false
+ constant 4 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+eval: false
+ constant 5 ish_5_4
+eval: false
+ constant 6 ish_9_6
+eval: false
+ constant 7 ish_9_7
+eval: false
+ constant 8 ish_0_8
+eval: false
+ constant 9 ish_2_13
+eval: false
+ constant 10 idj_7_0
+eval: false
+ constant 11 idj_7_2
+eval: false
+ constant 12 idj_4_2
+eval: false
+ constant 13 ish_13_13
+eval: true
+ constant 14 idj_1_11
+eval: true
+ constant 15 idj_11_0
+eval: false
+ constant 16 idj_5_5
+eval: false
+ constant 17 ish_8_7
+eval: false
+ constant 18 ish_2_2
+eval: true
+ constant 19 ish_5_9
+eval: false
+ constant 20 idj_11_7
+eval: false
+ constant 21 ish_12_6
+eval: false
+ constant 22 idj_5_1
+eval: false
+ constant 23 smt_conv::smt_conv::tmp_loc::10_intvar
+eval: 1
+ constant 24 ish_13_3
+eval: false
+ constant 25 ish_11_11
+eval: true
+ constant 26 ish_4_8
+eval: true
+ constant 27 idj_10_0
+eval: false
+ constant 28 ish_4_9
+eval: true
+ constant 29 idj_10_3
+eval: false
+ constant 30 idj_7_7
+eval: false
+ constant 31 ish_10_2
+eval: false
+ constant 32 ish_4_5
+eval: false
+ constant 33 idj_7_13
+eval: false
+ constant 34 ish_2_6
+eval: false
+ constant 35 idj_0_10
+eval: false
+ constant 36 idj_11_1
+eval: true
+ constant 37 idj_0_0
+eval: false
+ constant 38 ish_10_13
+eval: false
+ constant 39 idj_1_5
+eval: false
+ constant 40 ish_3_12
+eval: true
+ constant 41 ish_11_4
+eval: false
+ constant 42 idj_9_1
+eval: false
+ constant 43 idj_0_11
+eval: false
+ constant 44 idj_3_11
+eval: false
+ constant 45 ish_11_12
+eval: false
+ constant 46 idj_10_9
+eval: true
+ constant 47 idj_10_7
+eval: false
+ constant 48 idj_3_13
+eval: false
+ constant 49 idj_10_1
+eval: false
+ constant 50 ish_12_2
+eval: false
+ constant 51 ish_8_2
+eval: false
+ constant 52 ish_11_9
+eval: false
+ constant 53 idj_9_7
+eval: false
+ constant 54 idj_13_4
+eval: false
+ constant 55 ish_7_6
+eval: true
+ constant 56 ish_2_10
+eval: false
+ constant 57 idj_9_10
+eval: true
+ constant 58 idj_9_2
+eval: false
+ constant 59 ish_12_12
+eval: true
+ constant 60 ish_1_0
+eval: false
+ constant 61 ish_13_2
+eval: false
+ constant 62 ish_4_2
+eval: false
+ constant 63 idj_5_11
+eval: false
+ constant 64 ish_11_2
+eval: false
+ constant 65 idj_5_3
+eval: true
+ constant 66 ish_13_11
+eval: false
+ constant 67 ish_8_4
+eval: false
+ constant 68 ish_5_0
+eval: true
+ constant 69 ish_12_1
+eval: false
+ constant 70 idj_9_0
+eval: false
+ constant 71 idj_1_7
+eval: false
+ constant 72 ish_8_3
+eval: false
+ constant 73 ish_11_0
+eval: false
+ constant 74 nondet$symex::nondet3
+eval: false
+ constant 75 ish_4_4
+eval: true
+ constant 76 ish_0_1
+eval: false
+ constant 77 ish_1_13
+eval: true
+ constant 78 idj_1_1
+eval: false
+ constant 79 idj_9_13
+eval: false
+ constant 80 ish_8_8
+eval: true
+ constant 81 idj_4_0
+eval: false
+ constant 82 ish_7_7
+eval: true
+ constant 83 ish_0_5
+eval: false
+ constant 84 idj_4_9
+eval: false
+ constant 85 idj_9_5
+eval: false
+ constant 86 nondet$symex::nondet1
+eval: false
+ constant 87 idj_0_3
+eval: false
+ constant 88 ish_1_11
+eval: false
+ constant 89 idj_2_11
+eval: false
+ constant 90 ish_8_0
+eval: false
+ constant 91 ish_8_5
+eval: false
+ constant 92 ish_10_3
+eval: false
+ constant 93 idj_2_7
+eval: false
+ constant 94 ish_4_6
+eval: false
+ constant 95 ish_12_5
+eval: false
+ constant 96 ish_12_0
+eval: true
+ constant 97 ish_7_12
+eval: false
+ constant 98 ish_2_4
+eval: false
+ constant 99 ish_10_10
+eval: true
+ constant 100 ish_2_7
+eval: false
+ constant 101 idj_13_7
+eval: false
+ constant 102 idj_3_3
+eval: false
+ constant 103 ish_9_10
+eval: false
+ constant 104 ish_12_9
+eval: false
+ constant 105 idj_0_13
+eval: false
+ constant 106 ish_2_9
+eval: false
+ constant 107 ish_10_7
+eval: false
+ constant 108 ish_11_7
+eval: false
+ constant 109 ish_7_8
+eval: false
+ constant 110 idj_3_5
+eval: true
+ constant 111 ish_4_13
+eval: true
+ constant 112 ish_12_11
+eval: false
+ constant 113 ish_10_4
+eval: false
+ constant 114 idj_4_11
+eval: false
+ constant 115 ish_5_2
+eval: true
+ constant 116 ish_5_6
+eval: false
+ constant 117 ish_9_8
+eval: true
+ constant 118 ish_0_4
+eval: false
+ constant 119 idj_3_4
+eval: true
+ constant 120 ish_9_13
+eval: true
+ constant 121 idj_13_5
+eval: false
+ constant 122 ish_1_5
+eval: false
+ constant 123 symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+eval: 1
+ constant 124 ish_1_7
+eval: false
+ constant 125 ish_13_10
+eval: false
+ constant 126 idj_13_3
+eval: false
+ constant 127 idj_2_1
+eval: false
+ constant 128 ish_13_5
+eval: false
+ constant 129 idj_4_5
+eval: false
+ constant 130 ish_2_1
+eval: false
+ constant 131 idj_2_5
+eval: false
+ constant 132 idj_2_4
+eval: false
+ constant 133 ish_5_1
+eval: false
+ constant 134 ish_10_5
+eval: false
+ constant 135 ish_0_9
+eval: false
+ constant 136 ish_5_12
+eval: true
+ constant 137 ish_4_12
+eval: false
+ constant 138 idj_4_13
+eval: false
+ constant 139 idj_11_13
+eval: false
+ constant 140 ish_0_3
+eval: false
+ constant 141 ish_7_13
+eval: false
+ constant 142 ish_9_1
+eval: true
+ constant 143 ish_13_4
+eval: false
+ constant 144 ish_9_9
+eval: true
+ constant 145 idj_5_10
+eval: false
+ constant 146 ish_10_1
+eval: false
+ constant 147 ish_7_11
+eval: false
+ constant 148 idj_10_13
+eval: false
+ constant 149 idj_5_9
+eval: false
+ constant 150 smt_conv::smt_conv::_tmp_val_00_intvar
+eval: 0
+ constant 151 ish_0_11
+eval: false
+ constant 152 ish_9_4
+eval: true
+ constant 153 idj_11_9
+eval: false
+ constant 154 idj_5_13
+eval: false
+ constant 155 idj_4_1
+eval: false
+ constant 156 ish_0_6
+eval: false
+ constant 157 ish_7_10
+eval: false
+ constant 158 ish_13_7
+eval: false
+ constant 159 ish_12_3
+eval: false
+ constant 160 idj_13_10
+eval: false
+ constant 161 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+eval: false
+ constant 162 idj_7_11
+eval: false
+ constant 163 ish_10_6
+eval: false
+ constant 164 idj_3_1
+eval: false
+ constant 165 ish_11_8
+eval: false
+ constant 166 idj_2_9
+eval: false
+ constant 167 idj_3_0
+eval: false
+ constant 168 ish_4_1
+eval: true
+ constant 169 ish_1_12
+eval: false
+ constant 170 idj_4_10
+eval: true
+ constant 171 ish_11_10
+eval: true
+ constant 172 ish_10_0
+eval: false
+ constant 173 ish_4_3
+eval: false
+ constant 174 idj_3_10
+eval: false
+ constant 175 idj_0_9
+eval: false
+ constant 176 ish_13_6
+eval: false
+ constant 177 ish_8_11
+eval: false
+ constant 178 ish_4_7
+eval: false
+ constant 179 idj_13_11
+eval: false
+ constant 180 idj_7_9
+eval: false
+ constant 181 ish_1_1
+eval: true
+ constant 182 idj_11_5
+eval: false
+ constant 183 idj_13_9
+eval: false
+ constant 184 ish_12_7
+eval: false
+ constant 185 ish_1_8
+eval: true
+ constant 186 ish_2_12
+eval: false
+ constant 187 ish_8_6
+eval: false
+ constant 188 idj_5_2
+eval: false
+ constant 189 idj_7_5
+eval: false
+ constant 190 idj_1_13
+eval: false
+ constant 191 ish_9_5
+eval: false
+ constant 192 idj_1_4
+eval: false
+ constant 193 idj_3_9
+eval: false
+ constant 194 ish_10_9
+eval: false
+ constant 195 ish_11_3
+eval: false
+ constant 196 ish_5_8
+eval: false
+ constant 197 idj_3_7
+eval: false
+ constant 198 idj_10_4
+eval: true
+ constant 199 ish_1_4
+eval: false
+ constant 200 ish_5_7
+eval: false
+ constant 201 idj_13_2
+eval: false
+ constant 202 ish_5_13
+eval: false
+ constant 203 idj_13_1
+eval: false
+ constant 204 ish_4_0
+eval: false
+ constant 205 ish_3_3
+eval: true
+ constant 206 ish_1_2
+eval: false
+ constant 207 idj_9_3
+eval: false
+ constant 208 ish_3_9
+eval: false
+ constant 209 ish_0_0
+eval: true
+ constant 210 ish_6_6
+eval: true
+ constant 211 ish_9_3
+eval: false
+ constant 212 execution_statet::\guard_exec?0!0
+eval: true
+ constant 213 ish_2_11
+eval: false
+ constant 214 ish_5_3
+eval: false
+ constant 215 idj_0_4
+eval: false
+ constant 216 ish_5_10
+eval: false
+ constant 217 idj_10_11
+eval: false
+ constant 218 idj_11_2
+eval: false
+ constant 219 ish_12_10
+eval: false
+ constant 220 ish_3_13
+eval: false
+ constant 221 idj_5_0
+eval: false
+ constant 222 ish_9_2
+eval: false
+ constant 223 ish_9_12
+eval: false
+ constant 224 ish_1_10
+eval: false
+ constant 225 idj_11_4
+eval: false
+ constant 226 ish_0_12
+eval: true
+ constant 227 ish_10_8
+eval: false
+ constant 228 idj_9_11
+eval: false
+ constant 229 idj_13_13
+eval: false
+ constant 230 ish_0_7
+eval: false
+ constant 231 ish_8_13
+eval: false
+ constant 232 ish_3_8
+eval: true
+ constant 233 idj_4_7
+eval: false
+ constant 234 idj_7_10
+eval: false
+ constant 235 idj_1_0
+eval: false
+ constant 236 smt_conv::smt_conv::tmp_loc::00_intvar
+eval: 0
+ constant 237 ish_2_3
+eval: false
+ constant 238 idj_13_0
+eval: false
+ constant 239 idj_4_3
+eval: true
+ constant 240 idj_11_3
+eval: false
+ constant 241 ish_12_4
+eval: false
+ constant 242 idj_3_2
+eval: false
+ constant 243 ish_10_12
+eval: false
+ constant 244 ish_1_9
+eval: true
+ constant 245 idj_2_10
+eval: false
+ constant 246 ish_0_13
+eval: false
+ constant 247 ish_11_1
+eval: false
+ constant 248 ish_13_1
+eval: true
+ constant 249 idj_5_4
+eval: false
+ constant 250 idj_2_0
+eval: false
+ constant 251 ish_11_5
+eval: false
+ constant 252 idj_1_2
+eval: false
+ constant 253 idj_1_9
+eval: false
+ constant 254 ish_8_9
+eval: false
+ constant 255 idj_7_1
+eval: false
+ constant 256 ish_10_11
+eval: true
+ constant 257 ish_5_5
+eval: true
+ constant 258 ish_12_13
+eval: false
+ constant 259 ish_13_12
+eval: false
+ constant 260 idj_4_4
+eval: false
+ constant 261 idj_1_10
+eval: false
+ constant 262 idj_0_2
+eval: false
+ constant 263 ish_8_10
+eval: false
+ constant 264 ish_7_9
+eval: false
+ constant 265 idj_11_10
+eval: false
+ constant 266 idj_0_1
+eval: false
+ constant 267 idj_1_3
+eval: false
+ constant 268 ish_9_11
+eval: false
+ constant 269 ish_6_7
+eval: true
+ constant 270 ish_4_10
+eval: false
+ constant 271 ish_8_12
+eval: false
+ constant 272 ish_0_10
+eval: false
+ constant 273 ish_2_0
+eval: true
+ constant 274 idj_9_4
+eval: false
+ constant 275 idj_2_13
+eval: false
+ constant 276 idj_10_10
+eval: false
+ constant 277 idj_0_7
+eval: false
+ constant 278 ish_0_2
+eval: true
+ constant 279 ish_8_1
+eval: true
+ constant 280 ish_2_5
+eval: false
+ constant 281 ish_5_11
+eval: false
+ constant 282 idj_10_5
+eval: false
+ constant 283 idj_0_5
+eval: false
+ constant 284 ish_13_0
+eval: false
+ constant 285 idj_7_4
+eval: false
+ constant 286 ish_12_8
+eval: false
+ constant 287 idj_2_3
+eval: false
+ constant 288 ish_13_8
+eval: false
+ constant 289 idj_5_7
+eval: false
+ constant 290 ish_2_8
+eval: false
+ constant 291 ish_11_13
+eval: false
+ constant 292 idj_11_11
+eval: false
+ constant 293 ish_13_9
+eval: false
+ constant 294 symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+eval: 2
+ constant 295 ish_9_0
+eval: false
+ constant 296 idj_10_2
+eval: false
+ constant 297 ish_1_3
+eval: false
+ constant 298 idj_9_9
+eval: false
+ constant 299 ish_1_6
+eval: false
+translated model over
+===== valuation result:
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+execution_statet::\guard_exec?0!0
+idj_0_0
+idj_0_1
+idj_0_10
+idj_0_11
+idj_0_13
+idj_0_2
+idj_0_3
+idj_0_4
+idj_0_5
+idj_0_7
+idj_0_9
+idj_10_0
+idj_10_1
+idj_10_10
+idj_10_11
+idj_10_13
+idj_10_2
+idj_10_3
+idj_10_4
+idj_10_5
+idj_10_7
+idj_10_9
+idj_11_0
+idj_11_1
+idj_11_10
+idj_11_11
+idj_11_13
+idj_11_2
+idj_11_3
+idj_11_4
+idj_11_5
+idj_11_7
+idj_11_9
+idj_13_0
+idj_13_1
+idj_13_10
+idj_13_11
+idj_13_13
+idj_13_2
+idj_13_3
+idj_13_4
+idj_13_5
+idj_13_7
+idj_13_9
+idj_1_0
+idj_1_1
+idj_1_10
+idj_1_11
+idj_1_13
+idj_1_2
+idj_1_3
+idj_1_4
+idj_1_5
+idj_1_7
+idj_1_9
+idj_2_0
+idj_2_1
+idj_2_10
+idj_2_11
+idj_2_13
+idj_2_2
+idj_2_3
+idj_2_4
+idj_2_5
+idj_2_7
+idj_2_9
+idj_3_0
+idj_3_1
+idj_3_10
+idj_3_11
+idj_3_13
+idj_3_2
+idj_3_3
+idj_3_4
+idj_3_5
+idj_3_7
+idj_3_9
+idj_4_0
+idj_4_1
+idj_4_10
+idj_4_11
+idj_4_13
+idj_4_2
+idj_4_3
+idj_4_4
+idj_4_5
+idj_4_7
+idj_4_9
+idj_5_0
+idj_5_1
+idj_5_10
+idj_5_11
+idj_5_13
+idj_5_2
+idj_5_3
+idj_5_4
+idj_5_5
+idj_5_7
+idj_5_9
+idj_7_0
+idj_7_1
+idj_7_10
+idj_7_11
+idj_7_13
+idj_7_2
+idj_7_3
+idj_7_4
+idj_7_5
+idj_7_7
+idj_7_9
+idj_9_0
+idj_9_1
+idj_9_10
+idj_9_11
+idj_9_13
+idj_9_2
+idj_9_3
+idj_9_4
+idj_9_5
+idj_9_7
+idj_9_9
+ish_0_0
+ish_0_1
+ish_0_10
+ish_0_11
+ish_0_12
+ish_0_13
+ish_0_2
+ish_0_3
+ish_0_4
+ish_0_5
+ish_0_6
+ish_0_7
+ish_0_8
+ish_0_9
+ish_10_0
+ish_10_1
+ish_10_10
+ish_10_11
+ish_10_12
+ish_10_13
+ish_10_2
+ish_10_3
+ish_10_4
+ish_10_5
+ish_10_6
+ish_10_7
+ish_10_8
+ish_10_9
+ish_11_0
+ish_11_1
+ish_11_10
+ish_11_11
+ish_11_12
+ish_11_13
+ish_11_2
+ish_11_3
+ish_11_4
+ish_11_5
+ish_11_6
+ish_11_7
+ish_11_8
+ish_11_9
+ish_12_0
+ish_12_1
+ish_12_10
+ish_12_11
+ish_12_12
+ish_12_13
+ish_12_2
+ish_12_3
+ish_12_4
+ish_12_5
+ish_12_6
+ish_12_7
+ish_12_8
+ish_12_9
+ish_13_0
+ish_13_1
+ish_13_10
+ish_13_11
+ish_13_12
+ish_13_13
+ish_13_2
+ish_13_3
+ish_13_4
+ish_13_5
+ish_13_6
+ish_13_7
+ish_13_8
+ish_13_9
+ish_1_0
+ish_1_1
+ish_1_10
+ish_1_11
+ish_1_12
+ish_1_13
+ish_1_2
+ish_1_3
+ish_1_4
+ish_1_5
+ish_1_6
+ish_1_7
+ish_1_8
+ish_1_9
+ish_2_0
+ish_2_1
+ish_2_10
+ish_2_11
+ish_2_12
+ish_2_13
+ish_2_2
+ish_2_3
+ish_2_4
+ish_2_5
+ish_2_6
+ish_2_7
+ish_2_8
+ish_2_9
+ish_3_12
+ish_3_13
+ish_3_3
+ish_3_8
+ish_3_9
+ish_4_0
+ish_4_1
+ish_4_10
+ish_4_11
+ish_4_12
+ish_4_13
+ish_4_2
+ish_4_3
+ish_4_4
+ish_4_5
+ish_4_6
+ish_4_7
+ish_4_8
+ish_4_9
+ish_5_0
+ish_5_1
+ish_5_10
+ish_5_11
+ish_5_12
+ish_5_13
+ish_5_2
+ish_5_3
+ish_5_4
+ish_5_5
+ish_5_6
+ish_5_7
+ish_5_8
+ish_5_9
+ish_6_6
+ish_6_7
+ish_7_10
+ish_7_11
+ish_7_12
+ish_7_13
+ish_7_6
+ish_7_7
+ish_7_8
+ish_7_9
+ish_8_0
+ish_8_1
+ish_8_10
+ish_8_11
+ish_8_12
+ish_8_13
+ish_8_2
+ish_8_3
+ish_8_4
+ish_8_5
+ish_8_6
+ish_8_7
+ish_8_8
+ish_8_9
+ish_9_0
+ish_9_1
+ish_9_10
+ish_9_11
+ish_9_12
+ish_9_13
+ish_9_2
+ish_9_3
+ish_9_4
+ish_9_5
+ish_9_6
+ish_9_7
+ish_9_8
+ish_9_9
+nondet$symex::nondet1
+nondet$symex::nondet3
+smt_conv::smt_conv::_tmp_val_00_intvar
+int val for smt_conv::smt_conv::_tmp_val_00_intvar  val 0
+smt_conv::smt_conv::_tmp_val_00
+
+smt_conv::smt_conv::tmp_loc::00_intvar
+int val for smt_conv::smt_conv::tmp_loc::00_intvar  val 0
+smt_conv::smt_conv::tmp_loc::00
+
+smt_conv::smt_conv::tmp_loc::10_intvar
+int val for smt_conv::smt_conv::tmp_loc::10_intvar  val 1
+smt_conv::smt_conv::tmp_loc::10
+
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar  val 2
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+
+model info recorded: 
+model subsume info size: 11
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#4| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#6| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#3| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_3&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+locvar vals: 
+smt_conv::smt_conv::_tmp_val_00 0
+smt_conv::smt_conv::tmp_loc::00 0
+smt_conv::smt_conv::tmp_loc::10 1
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0 1
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0 2
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 14 with solver Z3-slhv
+Runtime decision procedure: 0.008s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 27 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: sat Time: 0.008s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 21 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 3
+Number of aht: 2
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 29
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 1 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 8 column 8 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 20 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 4
+Number of aht: 3
+Number of locvars: 3
+begin generate deduced assumptions disj
+lia assertion size: 44
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 2 with solver Z3-slhv
+Runtime decision procedure: 0.001s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 12 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.001s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 9
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2103
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 3 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 16 column 14 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 9
+Number of locvars: 7
+begin generate deduced assumptions disj
+lia assertion size: 2106
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 4 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 16 column 14 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 9
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2103
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 5 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 16 column 14 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 16 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 12
+Number of aht: 9
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2099
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 6 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 18 column 10 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 13
+Number of aht: 10
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2519
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 7 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 22 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 14 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 14
+Number of aht: 11
+Number of locvars: 7
+begin generate deduced assumptions disj
+lia assertion size: 2982
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 8 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 22 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 13
+Number of aht: 10
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2519
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 9 with solver Z3-slhv
+Runtime decision procedure: 0.004s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 22 column 5 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: unsat Time: 0.004s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 15 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 13
+Number of aht: 10
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2519
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX FINAL CHECK SET UNSAT XXXXXXXXXXXXXXXXXXXX
+Solving claim 10 with solver Z3-slhv
+Runtime decision procedure: 0.003s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 23 column 5 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: unsat Time: 0.003s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 13 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.000s
+Number of heap terms: 14
+Number of aht: 11
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2982
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 ish_11_6
+eval: false
+ constant 1 idj_2_2
+eval: false
+ constant 2 ish_4_11
+eval: false
+ constant 3 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+eval: false
+ constant 4 ish_3_2
+eval: false
+ constant 5 idj_8_2
+eval: false
+ constant 6 ish_5_4
+eval: true
+ constant 7 ish_9_6
+eval: false
+ constant 8 ish_2_13
+eval: false
+ constant 9 ish_9_7
+eval: false
+ constant 10 ish_0_8
+eval: false
+ constant 11 idj_7_2
+eval: false
+ constant 12 ish_13_13
+eval: true
+ constant 13 idj_4_2
+eval: false
+ constant 14 idj_8_7
+eval: false
+ constant 15 idj_5_5
+eval: false
+ constant 16 idj_1_11
+eval: false
+ constant 17 ish_2_2
+eval: true
+ constant 18 idj_11_7
+eval: false
+ constant 19 ish_5_9
+eval: false
+ constant 20 idj_5_1
+eval: true
+ constant 21 ish_12_6
+eval: false
+ constant 22 ish_8_7
+eval: false
+ constant 23 smt_conv::smt_conv::tmp_loc::10_intvar
+eval: 0
+ constant 24 idj_6_13
+eval: false
+ constant 25 ish_6_2
+eval: false
+ constant 26 ish_11_11
+eval: true
+ constant 27 ish_4_9
+eval: false
+ constant 28 idj_11_6
+eval: true
+ constant 29 ish_4_8
+eval: false
+ constant 30 idj_12_8
+eval: false
+ constant 31 idj_8_12
+eval: false
+ constant 32 ish_3_1
+eval: true
+ constant 33 ish_13_3
+eval: false
+ constant 34 idj_7_7
+eval: false
+ constant 35 idj_8_6
+eval: false
+ constant 36 idj_12_6
+eval: true
+ constant 37 ish_4_5
+eval: true
+ constant 38 ish_3_0
+eval: false
+ constant 39 idj_7_13
+eval: false
+ constant 40 ish_2_6
+eval: false
+ constant 41 idj_6_12
+eval: true
+ constant 42 idj_11_1
+eval: false
+ constant 43 idj_4_6
+eval: false
+ constant 44 idj_1_5
+eval: true
+ constant 45 ish_3_12
+eval: false
+ constant 46 idj_9_1
+eval: false
+ constant 47 idj_6_9
+eval: false
+ constant 48 ish_11_12
+eval: false
+ constant 49 ish_11_4
+eval: false
+ constant 50 idj_1_12
+eval: false
+ constant 51 idj_11_8
+eval: false
+ constant 52 ish_12_2
+eval: true
+ constant 53 ish_8_2
+eval: false
+ constant 54 ish_11_9
+eval: false
+ constant 55 idj_13_12
+eval: false
+ constant 56 idj_2_6
+eval: false
+ constant 57 idj_9_7
+eval: false
+ constant 58 idj_13_4
+eval: false
+ constant 59 idj_13_6
+eval: false
+ constant 60 ish_6_9
+eval: false
+ constant 61 ish_2_10
+eval: false
+ constant 62 idj_9_8
+eval: false
+ constant 63 idj_9_2
+eval: false
+ constant 64 ish_12_12
+eval: true
+ constant 65 ish_1_0
+eval: false
+ constant 66 ish_6_3
+eval: true
+ constant 67 ish_13_2
+eval: false
+ constant 68 ish_4_2
+eval: false
+ constant 69 idj_5_6
+eval: false
+ constant 70 idj_5_11
+eval: false
+ constant 71 ish_3_7
+eval: false
+ constant 72 ish_11_2
+eval: false
+ constant 73 ish_13_11
+eval: false
+ constant 74 ish_8_4
+eval: false
+ constant 75 idj_6_7
+eval: false
+ constant 76 ish_5_0
+eval: false
+ constant 77 ish_12_1
+eval: false
+ constant 78 ish_6_11
+eval: false
+ constant 79 ish_3_11
+eval: false
+ constant 80 idj_1_7
+eval: false
+ constant 81 ish_8_3
+eval: true
+ constant 82 ish_3_5
+eval: false
+ constant 83 ish_11_0
+eval: false
+ constant 84 nondet$symex::nondet3
+eval: false
+ constant 85 ish_4_4
+eval: true
+ constant 86 ish_8_8
+eval: true
+ constant 87 ish_1_13
+eval: true
+ constant 88 idj_5_12
+eval: false
+ constant 89 ish_0_1
+eval: false
+ constant 90 idj_9_13
+eval: false
+ constant 91 idj_1_1
+eval: false
+ constant 92 ish_7_7
+eval: true
+ constant 93 idj_6_5
+eval: false
+ constant 94 ish_6_10
+eval: false
+ constant 95 goto_symex::guard?0!0&0#2
+eval: true
+ constant 96 ish_0_5
+eval: false
+ constant 97 idj_13_8
+eval: false
+ constant 98 idj_4_9
+eval: false
+ constant 99 idj_5_8
+eval: false
+ constant 100 idj_8_11
+eval: false
+ constant 101 idj_9_5
+eval: false
+ constant 102 ish_4_6
+eval: false
+ constant 103 ish_1_11
+eval: false
+ constant 104 nondet$symex::nondet1
+eval: false
+ constant 105 idj_2_11
+eval: false
+ constant 106 ish_8_0
+eval: false
+ constant 107 idj_2_7
+eval: false
+ constant 108 ish_8_5
+eval: false
+ constant 109 ish_12_0
+eval: true
+ constant 110 ish_12_5
+eval: false
+ constant 111 ish_7_12
+eval: false
+ constant 112 idj_12_7
+eval: false
+ constant 113 ish_2_4
+eval: false
+ constant 114 ish_10_10
+eval: true
+ constant 115 ish_2_7
+eval: false
+ constant 116 idj_13_7
+eval: false
+ constant 117 ish_12_9
+eval: true
+ constant 118 ish_9_10
+eval: false
+ constant 119 idj_6_4
+eval: false
+ constant 120 ish_12_11
+eval: false
+ constant 121 ish_2_9
+eval: true
+ constant 122 ish_10_7
+eval: true
+ constant 123 ish_4_13
+eval: false
+ constant 124 ish_11_7
+eval: false
+ constant 125 ish_5_2
+eval: false
+ constant 126 ish_9_8
+eval: false
+ constant 127 idj_4_11
+eval: true
+ constant 128 ish_5_6
+eval: false
+ constant 129 ish_6_12
+eval: false
+ constant 130 idj_6_6
+eval: false
+ constant 131 ish_0_4
+eval: false
+ constant 132 idj_11_12
+eval: false
+ constant 133 ish_9_13
+eval: false
+ constant 134 idj_13_5
+eval: false
+ constant 135 idj_4_12
+eval: false
+ constant 136 idj_8_5
+eval: false
+ constant 137 ish_1_5
+eval: false
+ constant 138 ish_1_7
+eval: false
+ constant 139 symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+eval: 1
+ constant 140 idj_2_1
+eval: false
+ constant 141 ish_13_10
+eval: false
+ constant 142 ish_13_5
+eval: false
+ constant 143 idj_7_6
+eval: false
+ constant 144 idj_4_5
+eval: false
+ constant 145 idj_8_8
+eval: false
+ constant 146 ish_2_1
+eval: false
+ constant 147 idj_2_4
+eval: false
+ constant 148 idj_2_5
+eval: false
+ constant 149 ish_3_6
+eval: false
+ constant 150 ish_5_1
+eval: false
+ constant 151 ish_0_9
+eval: false
+ constant 152 idj_4_8
+eval: true
+ constant 153 ish_6_0
+eval: true
+ constant 154 idj_2_8
+eval: false
+ constant 155 idj_8_4
+eval: true
+ constant 156 ish_5_12
+eval: false
+ constant 157 idj_6_1
+eval: false
+ constant 158 ish_4_12
+eval: false
+ constant 159 idj_4_13
+eval: false
+ constant 160 idj_11_13
+eval: false
+ constant 161 ish_0_3
+eval: false
+ constant 162 ish_7_13
+eval: false
+ constant 163 ish_9_1
+eval: false
+ constant 164 ish_13_4
+eval: false
+ constant 165 ish_9_9
+eval: true
+ constant 166 smt_conv::smt_conv::_tmp_val_00_intvar
+eval: 1
+ constant 167 idj_5_9
+eval: false
+ constant 168 ish_7_11
+eval: false
+ constant 169 ish_9_4
+eval: false
+ constant 170 ish_0_11
+eval: false
+ constant 171 idj_11_9
+eval: false
+ constant 172 idj_5_13
+eval: false
+ constant 173 idj_4_1
+eval: false
+ constant 174 ish_0_6
+eval: false
+ constant 175 ish_7_10
+eval: true
+ constant 176 ish_13_7
+eval: false
+ constant 177 idj_7_8
+eval: false
+ constant 178 idj_9_6
+eval: false
+ constant 179 idj_9_12
+eval: false
+ constant 180 ish_3_4
+eval: false
+ constant 181 ish_12_3
+eval: false
+ constant 182 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+eval: false
+ constant 183 idj_7_11
+eval: false
+ constant 184 ish_11_8
+eval: true
+ constant 185 idj_2_9
+eval: false
+ constant 186 ish_4_1
+eval: false
+ constant 187 ish_1_12
+eval: false
+ constant 188 ish_11_10
+eval: false
+ constant 189 ish_4_3
+eval: false
+ constant 190 idj_2_12
+eval: false
+ constant 191 idj_12_12
+eval: false
+ constant 192 ish_13_6
+eval: false
+ constant 193 ish_8_11
+eval: true
+ constant 194 ish_4_7
+eval: false
+ constant 195 idj_6_2
+eval: false
+ constant 196 idj_13_11
+eval: false
+ constant 197 idj_7_9
+eval: false
+ constant 198 ish_1_1
+eval: true
+ constant 199 idj_11_5
+eval: false
+ constant 200 idj_12_1
+eval: false
+ constant 201 ish_12_7
+eval: false
+ constant 202 idj_13_9
+eval: false
+ constant 203 ish_6_13
+eval: false
+ constant 204 ish_1_8
+eval: true
+ constant 205 ish_2_12
+eval: false
+ constant 206 idj_12_9
+eval: false
+ constant 207 ish_8_6
+eval: false
+ constant 208 idj_5_2
+eval: false
+ constant 209 idj_1_13
+eval: false
+ constant 210 idj_7_5
+eval: false
+ constant 211 idj_6_8
+eval: false
+ constant 212 ish_9_5
+eval: false
+ constant 213 idj_12_13
+eval: false
+ constant 214 idj_1_4
+eval: false
+ constant 215 ish_5_8
+eval: false
+ constant 216 ish_11_3
+eval: true
+ constant 217 ish_5_7
+eval: false
+ constant 218 ish_1_4
+eval: false
+ constant 219 idj_7_12
+eval: false
+ constant 220 idj_13_2
+eval: false
+ constant 221 ish_5_13
+eval: false
+ constant 222 idj_12_11
+eval: false
+ constant 223 ish_1_2
+eval: false
+ constant 224 ish_4_0
+eval: false
+ constant 225 ish_3_3
+eval: true
+ constant 226 idj_13_1
+eval: false
+ constant 227 ish_5_3
+eval: false
+ constant 228 ish_3_9
+eval: false
+ constant 229 ish_5_10
+eval: false
+ constant 230 ish_0_0
+eval: true
+ constant 231 ish_2_11
+eval: false
+ constant 232 ish_9_3
+eval: false
+ constant 233 execution_statet::\guard_exec?0!0
+eval: true
+ constant 234 ish_6_6
+eval: true
+ constant 235 ish_12_10
+eval: false
+ constant 236 idj_11_2
+eval: false
+ constant 237 ish_3_13
+eval: false
+ constant 238 idj_11_4
+eval: true
+ constant 239 ish_6_1
+eval: false
+ constant 240 ish_9_12
+eval: false
+ constant 241 ish_9_2
+eval: true
+ constant 242 ish_1_10
+eval: false
+ constant 243 ish_0_12
+eval: false
+ constant 244 ish_0_7
+eval: false
+ constant 245 idj_9_11
+eval: false
+ constant 246 idj_13_13
+eval: false
+ constant 247 smt_conv::smt_conv::tmp_loc::00_intvar
+eval: 1
+ constant 248 ish_3_8
+eval: false
+ constant 249 ish_8_13
+eval: true
+ constant 250 idj_4_7
+eval: false
+ constant 251 ish_2_3
+eval: false
+ constant 252 ish_12_4
+eval: false
+ constant 253 idj_6_11
+eval: true
+ constant 254 ish_1_9
+eval: false
+ constant 255 ish_0_13
+eval: false
+ constant 256 ish_11_1
+eval: true
+ constant 257 ish_13_1
+eval: true
+ constant 258 idj_5_4
+eval: false
+ constant 259 ish_11_5
+eval: false
+ constant 260 idj_1_2
+eval: false
+ constant 261 idj_1_9
+eval: false
+ constant 262 ish_8_9
+eval: false
+ constant 263 idj_1_6
+eval: false
+ constant 264 idj_7_1
+eval: false
+ constant 265 ish_5_5
+eval: true
+ constant 266 ish_12_13
+eval: false
+ constant 267 idj_12_2
+eval: false
+ constant 268 ish_13_12
+eval: false
+ constant 269 idj_4_4
+eval: false
+ constant 270 ish_3_10
+eval: false
+ constant 271 ish_8_10
+eval: false
+ constant 272 idj_1_8
+eval: false
+ constant 273 idj_8_13
+eval: false
+ constant 274 idj_8_1
+eval: false
+ constant 275 ish_9_11
+eval: false
+ constant 276 ish_6_7
+eval: false
+ constant 277 ish_0_10
+eval: false
+ constant 278 ish_8_12
+eval: false
+ constant 279 ish_4_10
+eval: false
+ constant 280 idj_8_9
+eval: false
+ constant 281 ish_2_0
+eval: true
+ constant 282 idj_9_4
+eval: false
+ constant 283 idj_2_13
+eval: false
+ constant 284 ish_0_2
+eval: true
+ constant 285 ish_6_8
+eval: false
+ constant 286 ish_8_1
+eval: true
+ constant 287 ish_2_5
+eval: false
+ constant 288 ish_5_11
+eval: false
+ constant 289 ish_13_0
+eval: false
+ constant 290 idj_7_4
+eval: false
+ constant 291 ish_12_8
+eval: false
+ constant 292 idj_12_4
+eval: false
+ constant 293 ish_13_8
+eval: false
+ constant 294 idj_5_7
+eval: false
+ constant 295 ish_2_8
+eval: false
+ constant 296 ish_11_13
+eval: true
+ constant 297 idj_11_11
+eval: false
+ constant 298 ish_13_9
+eval: false
+ constant 299 symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+eval: 2
+ constant 300 ish_9_0
+eval: false
+ constant 301 idj_12_5
+eval: false
+ constant 302 idj_9_9
+eval: false
+ constant 303 ish_1_3
+eval: true
+ constant 304 ish_1_6
+eval: false
+translated model over
+===== valuation result:
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+execution_statet::\guard_exec?0!0
+goto_symex::guard?0!0&0#2
+idj_11_1
+idj_11_11
+idj_11_12
+idj_11_13
+idj_11_2
+idj_11_4
+idj_11_5
+idj_11_6
+idj_11_7
+idj_11_8
+idj_11_9
+idj_12_1
+idj_12_11
+idj_12_12
+idj_12_13
+idj_12_2
+idj_12_4
+idj_12_5
+idj_12_6
+idj_12_7
+idj_12_8
+idj_12_9
+idj_13_1
+idj_13_11
+idj_13_12
+idj_13_13
+idj_13_2
+idj_13_4
+idj_13_5
+idj_13_6
+idj_13_7
+idj_13_8
+idj_13_9
+idj_1_1
+idj_1_11
+idj_1_12
+idj_1_13
+idj_1_2
+idj_1_4
+idj_1_5
+idj_1_6
+idj_1_7
+idj_1_8
+idj_1_9
+idj_2_1
+idj_2_11
+idj_2_12
+idj_2_13
+idj_2_2
+idj_2_4
+idj_2_5
+idj_2_6
+idj_2_7
+idj_2_8
+idj_2_9
+idj_4_1
+idj_4_11
+idj_4_12
+idj_4_13
+idj_4_2
+idj_4_4
+idj_4_5
+idj_4_6
+idj_4_7
+idj_4_8
+idj_4_9
+idj_5_1
+idj_5_11
+idj_5_12
+idj_5_13
+idj_5_2
+idj_5_4
+idj_5_5
+idj_5_6
+idj_5_7
+idj_5_8
+idj_5_9
+idj_6_1
+idj_6_11
+idj_6_12
+idj_6_13
+idj_6_2
+idj_6_4
+idj_6_5
+idj_6_6
+idj_6_7
+idj_6_8
+idj_6_9
+idj_7_1
+idj_7_11
+idj_7_12
+idj_7_13
+idj_7_2
+idj_7_4
+idj_7_5
+idj_7_6
+idj_7_7
+idj_7_8
+idj_7_9
+idj_8_1
+idj_8_11
+idj_8_12
+idj_8_13
+idj_8_2
+idj_8_4
+idj_8_5
+idj_8_6
+idj_8_7
+idj_8_8
+idj_8_9
+idj_9_1
+idj_9_11
+idj_9_12
+idj_9_13
+idj_9_2
+idj_9_4
+idj_9_5
+idj_9_6
+idj_9_7
+idj_9_8
+idj_9_9
+ish_0_0
+ish_0_1
+ish_0_10
+ish_0_11
+ish_0_12
+ish_0_13
+ish_0_2
+ish_0_3
+ish_0_4
+ish_0_5
+ish_0_6
+ish_0_7
+ish_0_8
+ish_0_9
+ish_10_10
+ish_10_7
+ish_11_0
+ish_11_1
+ish_11_10
+ish_11_11
+ish_11_12
+ish_11_13
+ish_11_2
+ish_11_3
+ish_11_4
+ish_11_5
+ish_11_6
+ish_11_7
+ish_11_8
+ish_11_9
+ish_12_0
+ish_12_1
+ish_12_10
+ish_12_11
+ish_12_12
+ish_12_13
+ish_12_2
+ish_12_3
+ish_12_4
+ish_12_5
+ish_12_6
+ish_12_7
+ish_12_8
+ish_12_9
+ish_13_0
+ish_13_1
+ish_13_10
+ish_13_11
+ish_13_12
+ish_13_13
+ish_13_2
+ish_13_3
+ish_13_4
+ish_13_5
+ish_13_6
+ish_13_7
+ish_13_8
+ish_13_9
+ish_1_0
+ish_1_1
+ish_1_10
+ish_1_11
+ish_1_12
+ish_1_13
+ish_1_2
+ish_1_3
+ish_1_4
+ish_1_5
+ish_1_6
+ish_1_7
+ish_1_8
+ish_1_9
+ish_2_0
+ish_2_1
+ish_2_10
+ish_2_11
+ish_2_12
+ish_2_13
+ish_2_2
+ish_2_3
+ish_2_4
+ish_2_5
+ish_2_6
+ish_2_7
+ish_2_8
+ish_2_9
+ish_3_0
+ish_3_1
+ish_3_10
+ish_3_11
+ish_3_12
+ish_3_13
+ish_3_2
+ish_3_3
+ish_3_4
+ish_3_5
+ish_3_6
+ish_3_7
+ish_3_8
+ish_3_9
+ish_4_0
+ish_4_1
+ish_4_10
+ish_4_11
+ish_4_12
+ish_4_13
+ish_4_2
+ish_4_3
+ish_4_4
+ish_4_5
+ish_4_6
+ish_4_7
+ish_4_8
+ish_4_9
+ish_5_0
+ish_5_1
+ish_5_10
+ish_5_11
+ish_5_12
+ish_5_13
+ish_5_2
+ish_5_3
+ish_5_4
+ish_5_5
+ish_5_6
+ish_5_7
+ish_5_8
+ish_5_9
+ish_6_0
+ish_6_1
+ish_6_10
+ish_6_11
+ish_6_12
+ish_6_13
+ish_6_2
+ish_6_3
+ish_6_6
+ish_6_7
+ish_6_8
+ish_6_9
+ish_7_10
+ish_7_11
+ish_7_12
+ish_7_13
+ish_7_7
+ish_8_0
+ish_8_1
+ish_8_10
+ish_8_11
+ish_8_12
+ish_8_13
+ish_8_2
+ish_8_3
+ish_8_4
+ish_8_5
+ish_8_6
+ish_8_7
+ish_8_8
+ish_8_9
+ish_9_0
+ish_9_1
+ish_9_10
+ish_9_11
+ish_9_12
+ish_9_13
+ish_9_2
+ish_9_3
+ish_9_4
+ish_9_5
+ish_9_6
+ish_9_7
+ish_9_8
+ish_9_9
+nondet$symex::nondet1
+nondet$symex::nondet3
+smt_conv::smt_conv::_tmp_val_00_intvar
+int val for smt_conv::smt_conv::_tmp_val_00_intvar  val 1
+smt_conv::smt_conv::_tmp_val_00
+
+smt_conv::smt_conv::tmp_loc::00_intvar
+int val for smt_conv::smt_conv::tmp_loc::00_intvar  val 1
+smt_conv::smt_conv::tmp_loc::00
+
+smt_conv::smt_conv::tmp_loc::10_intvar
+int val for smt_conv::smt_conv::tmp_loc::10_intvar  val 0
+smt_conv::smt_conv::tmp_loc::10
+
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar  val 2
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+
+model info recorded: 
+model subsume info size: 11
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#4| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_3&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#3| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#6| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+locvar vals: 
+smt_conv::smt_conv::_tmp_val_00 1
+smt_conv::smt_conv::tmp_loc::00 1
+smt_conv::smt_conv::tmp_loc::10 0
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0 1
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0 2
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 11 with solver Z3-slhv
+Runtime decision procedure: 0.008s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 25 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: sat Time: 0.008s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 11 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 17
+Number of aht: 14
+Number of locvars: 8
+begin generate deduced assumptions disj
+lia assertion size: 6829
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 idj_0_12
+eval: false
+ constant 1 idj_4_14
+eval: false
+ constant 2 idj_16_1
+eval: false
+ constant 3 idj_2_2
+eval: false
+ constant 4 idj_8_2
+eval: false
+ constant 5 ish_9_6
+eval: false
+ constant 6 ish_9_7
+eval: false
+ constant 7 ish_0_8
+eval: false
+ constant 8 ish_1_16
+eval: false
+ constant 9 ish_13_13
+eval: true
+ constant 10 idj_1_11
+eval: false
+ constant 11 idj_11_0
+eval: false
+ constant 12 ish_7_16
+eval: false
+ constant 13 ish_2_13
+eval: false
+ constant 14 ish_13_16
+eval: false
+ constant 15 ish_2_2
+eval: true
+ constant 16 ish_12_6
+eval: true
+ constant 17 idj_14_6
+eval: false
+ constant 18 ish_4_9
+eval: true
+ constant 19 idj_11_6
+eval: false
+ constant 20 idj_12_8
+eval: false
+ constant 21 ish_14_15
+eval: false
+ constant 22 idj_8_12
+eval: false
+ constant 23 ish_3_1
+eval: false
+ constant 24 idj_8_6
+eval: false
+ constant 25 ish_11_16
+eval: false
+ constant 26 idj_12_6
+eval: false
+ constant 27 ish_3_0
+eval: false
+ constant 28 idj_0_10
+eval: false
+ constant 29 ish_2_6
+eval: false
+ constant 30 ish_6_14
+eval: false
+ constant 31 idj_6_12
+eval: false
+ constant 32 ish_16_15
+eval: false
+ constant 33 idj_4_6
+eval: false
+ constant 34 ish_10_13
+eval: false
+ constant 35 ish_3_12
+eval: false
+ constant 36 idj_3_11
+eval: false
+ constant 37 idj_6_9
+eval: false
+ constant 38 idj_0_11
+eval: false
+ constant 39 idj_10_9
+eval: false
+ constant 40 ish_16_11
+eval: false
+ constant 41 idj_6_16
+eval: false
+ constant 42 idj_11_8
+eval: false
+ constant 43 ish_7_2
+eval: false
+ constant 44 idj_13_12
+eval: true
+ constant 45 ish_0_14
+eval: false
+ constant 46 idj_2_6
+eval: false
+ constant 47 ish_2_10
+eval: false
+ constant 48 idj_13_6
+eval: false
+ constant 49 idj_13_4
+eval: false
+ constant 50 idj_14_4
+eval: false
+ constant 51 ish_14_5
+eval: false
+ constant 52 ish_16_1
+eval: false
+ constant 53 idj_9_8
+eval: false
+ constant 54 idj_14_13
+eval: true
+ constant 55 ish_12_12
+eval: true
+ constant 56 ish_13_2
+eval: false
+ constant 57 ish_4_2
+eval: false
+ constant 58 ish_13_11
+eval: false
+ constant 59 ish_12_1
+eval: false
+ constant 60 idj_9_0
+eval: false
+ constant 61 ish_3_11
+eval: false
+ constant 62 ish_10_15
+eval: false
+ constant 63 ish_8_3
+eval: true
+ constant 64 idj_0_14
+eval: false
+ constant 65 ish_8_8
+eval: true
+ constant 66 ish_4_4
+eval: true
+ constant 67 idj_4_0
+eval: false
+ constant 68 idj_1_1
+eval: false
+ constant 69 ish_0_1
+eval: false
+ constant 70 ish_7_7
+eval: true
+ constant 71 idj_4_16
+eval: false
+ constant 72 ish_0_5
+eval: false
+ constant 73 ish_6_10
+eval: false
+ constant 74 idj_13_8
+eval: false
+ constant 75 idj_8_11
+eval: false
+ constant 76 ish_5_14
+eval: false
+ constant 77 idj_11_14
+eval: false
+ constant 78 idj_4_9
+eval: false
+ constant 79 idj_16_9
+eval: false
+ constant 80 idj_12_0
+eval: false
+ constant 81 nondet$symex::nondet1
+eval: false
+ constant 82 ish_14_0
+eval: false
+ constant 83 idj_2_11
+eval: false
+ constant 84 ish_8_0
+eval: false
+ constant 85 ish_10_3
+eval: false
+ constant 86 ish_2_15
+eval: false
+ constant 87 idj_12_16
+eval: false
+ constant 88 ish_12_5
+eval: true
+ constant 89 idj_14_2
+eval: false
+ constant 90 ish_2_4
+eval: false
+ constant 91 ish_14_10
+eval: false
+ constant 92 ish_10_10
+eval: true
+ constant 93 ish_7_1
+eval: false
+ constant 94 ish_9_10
+eval: false
+ constant 95 idj_16_0
+eval: false
+ constant 96 ish_12_11
+eval: false
+ constant 97 ish_2_14
+eval: false
+ constant 98 idj_8_14
+eval: false
+ constant 99 ish_7_15
+eval: false
+ constant 100 idj_14_11
+eval: false
+ constant 101 ish_6_12
+eval: true
+ constant 102 idj_6_6
+eval: false
+ constant 103 ish_0_4
+eval: false
+ constant 104 symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+eval: 1
+ constant 105 ish_2_16
+eval: false
+ constant 106 idj_2_4
+eval: false
+ constant 107 ish_12_15
+eval: false
+ constant 108 ish_2_1
+eval: false
+ constant 109 idj_0_8
+eval: false
+ constant 110 ish_0_9
+eval: false
+ constant 111 ish_8_15
+eval: false
+ constant 112 idj_2_8
+eval: false
+ constant 113 ish_5_12
+eval: false
+ constant 114 idj_6_1
+eval: false
+ constant 115 ish_4_12
+eval: false
+ constant 116 idj_4_13
+eval: false
+ constant 117 idj_11_13
+eval: false
+ constant 118 idj_3_8
+eval: false
+ constant 119 ish_0_3
+eval: false
+ constant 120 ish_9_1
+eval: false
+ constant 121 smt_conv::smt_conv::_tmp_val_00_intvar
+eval: 3
+ constant 122 ish_16_5
+eval: true
+ constant 123 ish_10_1
+eval: false
+ constant 124 idj_10_13
+eval: false
+ constant 125 ish_7_11
+eval: false
+ constant 126 ish_8_16
+eval: false
+ constant 127 ish_9_4
+eval: true
+ constant 128 idj_11_9
+eval: false
+ constant 129 ish_7_10
+eval: false
+ constant 130 ish_13_7
+eval: true
+ constant 131 idj_9_6
+eval: false
+ constant 132 ish_3_4
+eval: false
+ constant 133 ish_12_3
+eval: false
+ constant 134 idj_13_10
+eval: false
+ constant 135 idj_3_1
+eval: false
+ constant 136 ish_8_14
+eval: true
+ constant 137 idj_3_0
+eval: false
+ constant 138 idj_10_8
+eval: true
+ constant 139 ish_10_0
+eval: false
+ constant 140 idj_12_12
+eval: false
+ constant 141 idj_3_10
+eval: false
+ constant 142 ish_4_3
+eval: false
+ constant 143 ish_5_16
+eval: true
+ constant 144 ish_4_7
+eval: false
+ constant 145 ish_16_0
+eval: true
+ constant 146 idj_13_11
+eval: false
+ constant 147 ish_5_15
+eval: false
+ constant 148 idj_3_6
+eval: false
+ constant 149 idj_12_10
+eval: false
+ constant 150 idj_12_1
+eval: false
+ constant 151 idj_13_9
+eval: false
+ constant 152 ish_6_13
+eval: false
+ constant 153 idj_1_14
+eval: false
+ constant 154 idj_12_9
+eval: false
+ constant 155 idj_1_13
+eval: false
+ constant 156 ish_9_5
+eval: false
+ constant 157 idj_6_8
+eval: false
+ constant 158 ish_5_8
+eval: false
+ constant 159 ish_10_9
+eval: true
+ constant 160 ish_14_16
+eval: false
+ constant 161 idj_10_4
+eval: false
+ constant 162 ish_9_16
+eval: false
+ constant 163 ish_5_13
+eval: false
+ constant 164 idj_12_11
+eval: false
+ constant 165 idj_13_1
+eval: false
+ constant 166 ish_3_3
+eval: true
+ constant 167 ish_4_0
+eval: false
+ constant 168 idj_6_10
+eval: false
+ constant 169 ish_9_14
+eval: false
+ constant 170 idj_10_12
+eval: false
+ constant 171 ish_0_0
+eval: true
+ constant 172 idj_9_3
+eval: false
+ constant 173 ish_2_11
+eval: false
+ constant 174 execution_statet::\guard_exec?0!0
+eval: true
+ constant 175 idj_8_0
+eval: false
+ constant 176 ish_6_15
+eval: false
+ constant 177 idj_10_11
+eval: false
+ constant 178 ish_12_10
+eval: false
+ constant 179 idj_9_16
+eval: false
+ constant 180 idj_11_4
+eval: false
+ constant 181 ish_9_12
+eval: false
+ constant 182 ish_6_1
+eval: false
+ constant 183 ish_0_12
+eval: false
+ constant 184 ish_10_8
+eval: false
+ constant 185 idj_13_13
+eval: false
+ constant 186 ish_3_8
+eval: true
+ constant 187 ish_8_13
+eval: false
+ constant 188 ish_14_2
+eval: true
+ constant 189 ish_12_16
+eval: true
+ constant 190 idj_14_12
+eval: false
+ constant 191 ish_12_4
+eval: false
+ constant 192 idj_3_2
+eval: false
+ constant 193 idj_10_6
+eval: false
+ constant 194 idj_2_10
+eval: false
+ constant 195 ish_0_13
+eval: false
+ constant 196 idj_14_14
+eval: false
+ constant 197 ish_13_1
+eval: false
+ constant 198 idj_2_0
+eval: false
+ constant 199 ish_15_1
+eval: true
+ constant 200 idj_3_16
+eval: false
+ constant 201 ish_16_4
+eval: false
+ constant 202 idj_1_2
+eval: false
+ constant 203 ish_16_13
+eval: false
+ constant 204 idj_14_1
+eval: false
+ constant 205 ish_12_13
+eval: false
+ constant 206 idj_12_2
+eval: false
+ constant 207 idj_1_10
+eval: false
+ constant 208 ish_3_10
+eval: false
+ constant 209 idj_1_8
+eval: false
+ constant 210 idj_9_14
+eval: false
+ constant 211 idj_0_2
+eval: false
+ constant 212 idj_11_10
+eval: false
+ constant 213 idj_8_1
+eval: false
+ constant 214 ish_6_7
+eval: false
+ constant 215 ish_0_10
+eval: false
+ constant 216 ish_8_12
+eval: false
+ constant 217 ish_0_15
+eval: false
+ constant 218 ish_2_0
+eval: false
+ constant 219 idj_10_10
+eval: false
+ constant 220 idj_2_13
+eval: false
+ constant 221 ish_0_2
+eval: false
+ constant 222 ish_8_1
+eval: false
+ constant 223 idj_13_16
+eval: false
+ constant 224 ish_13_0
+eval: false
+ constant 225 ish_12_8
+eval: false
+ constant 226 idj_8_10
+eval: true
+ constant 227 ish_13_8
+eval: false
+ constant 228 idj_2_3
+eval: false
+ constant 229 ish_9_0
+eval: false
+ constant 230 ish_0_16
+eval: true
+ constant 231 idj_9_9
+eval: false
+ constant 232 ish_4_11
+eval: false
+ constant 233 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+eval: false
+ constant 234 ish_3_2
+eval: true
+ constant 235 ish_5_4
+eval: false
+ constant 236 idj_4_2
+eval: false
+ constant 237 idj_16_14
+eval: false
+ constant 238 ish_6_16
+eval: true
+ constant 239 ish_8_7
+eval: true
+ constant 240 ish_5_9
+eval: false
+ constant 241 smt_conv::smt_conv::tmp_loc::10_intvar
+eval: 4
+ constant 242 idj_6_13
+eval: false
+ constant 243 ish_6_2
+eval: false
+ constant 244 ish_11_11
+eval: true
+ constant 245 idj_10_0
+eval: false
+ constant 246 ish_4_8
+eval: false
+ constant 247 ish_13_3
+eval: false
+ constant 248 ish_11_15
+eval: true
+ constant 249 idj_10_3
+eval: false
+ constant 250 idj_0_16
+eval: false
+ constant 251 ish_10_2
+eval: false
+ constant 252 ish_4_5
+eval: false
+ constant 253 idj_11_16
+eval: false
+ constant 254 ish_14_9
+eval: false
+ constant 255 ish_16_9
+eval: false
+ constant 256 idj_11_1
+eval: false
+ constant 257 idj_0_0
+eval: false
+ constant 258 idj_9_1
+eval: false
+ constant 259 ish_16_8
+eval: false
+ constant 260 idj_1_12
+eval: false
+ constant 261 ish_16_7
+eval: false
+ constant 262 idj_10_1
+eval: false
+ constant 263 ish_12_2
+eval: false
+ constant 264 ish_8_2
+eval: true
+ constant 265 idj_3_13
+eval: false
+ constant 266 ish_16_16
+eval: true
+ constant 267 ish_7_6
+eval: false
+ constant 268 ish_6_9
+eval: false
+ constant 269 idj_9_10
+eval: false
+ constant 270 ish_3_16
+eval: false
+ constant 271 idj_9_2
+eval: false
+ constant 272 idj_2_14
+eval: false
+ constant 273 idj_16_8
+eval: false
+ constant 274 ish_6_3
+eval: false
+ constant 275 ish_3_7
+eval: true
+ constant 276 idj_16_3
+eval: false
+ constant 277 idj_16_4
+eval: false
+ constant 278 ish_8_4
+eval: false
+ constant 279 ish_14_14
+eval: true
+ constant 280 ish_5_0
+eval: false
+ constant 281 idj_8_3
+eval: false
+ constant 282 ish_6_11
+eval: false
+ constant 283 idj_14_10
+eval: true
+ constant 284 ish_3_5
+eval: false
+ constant 285 nondet$symex::nondet3
+eval: false
+ constant 286 idj_9_13
+eval: false
+ constant 287 ish_14_6
+eval: false
+ constant 288 goto_symex::guard?0!0&0#2
+eval: true
+ constant 289 idj_16_11
+eval: false
+ constant 290 idj_16_12
+eval: false
+ constant 291 ish_16_10
+eval: false
+ constant 292 ish_4_6
+eval: false
+ constant 293 idj_0_3
+eval: false
+ constant 294 ish_8_5
+eval: false
+ constant 295 ish_7_3
+eval: true
+ constant 296 idj_16_2
+eval: false
+ constant 297 ish_12_0
+eval: true
+ constant 298 ish_3_14
+eval: false
+ constant 299 ish_7_12
+eval: false
+ constant 300 idj_2_16
+eval: false
+ constant 301 ish_2_7
+eval: false
+ constant 302 idj_3_3
+eval: false
+ constant 303 ish_14_7
+eval: true
+ constant 304 ish_12_9
+eval: false
+ constant 305 idj_6_4
+eval: false
+ constant 306 idj_0_13
+eval: false
+ constant 307 ish_2_9
+eval: false
+ constant 308 ish_4_13
+eval: false
+ constant 309 ish_10_7
+eval: false
+ constant 310 ish_7_8
+eval: false
+ constant 311 ish_14_4
+eval: false
+ constant 312 ish_5_2
+eval: false
+ constant 313 ish_10_4
+eval: true
+ constant 314 ish_9_8
+eval: false
+ constant 315 ish_5_6
+eval: false
+ constant 316 idj_4_11
+eval: false
+ constant 317 idj_3_4
+eval: true
+ constant 318 idj_4_12
+eval: false
+ constant 319 ish_9_13
+eval: false
+ constant 320 idj_11_12
+eval: false
+ constant 321 idj_6_3
+eval: false
+ constant 322 ish_15_11
+eval: true
+ constant 323 ish_7_4
+eval: false
+ constant 324 idj_2_1
+eval: false
+ constant 325 idj_13_3
+eval: false
+ constant 326 ish_4_16
+eval: false
+ constant 327 ish_13_5
+eval: true
+ constant 328 idj_8_8
+eval: false
+ constant 329 ish_7_5
+eval: false
+ constant 330 idj_3_14
+eval: false
+ constant 331 ish_3_6
+eval: false
+ constant 332 ish_5_1
+eval: false
+ constant 333 ish_10_5
+eval: false
+ constant 334 ish_16_12
+eval: false
+ constant 335 ish_7_14
+eval: false
+ constant 336 idj_4_8
+eval: false
+ constant 337 ish_6_0
+eval: true
+ constant 338 idj_8_4
+eval: false
+ constant 339 idj_3_12
+eval: false
+ constant 340 ish_6_5
+eval: true
+ constant 341 idj_1_16
+eval: false
+ constant 342 idj_16_6
+eval: false
+ constant 343 ish_7_13
+eval: false
+ constant 344 ish_16_3
+eval: false
+ constant 345 ish_9_9
+eval: true
+ constant 346 ish_0_11
+eval: false
+ constant 347 idj_4_1
+eval: false
+ constant 348 ish_0_6
+eval: false
+ constant 349 idj_12_3
+eval: false
+ constant 350 idj_10_14
+eval: true
+ constant 351 idj_9_12
+eval: false
+ constant 352 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+eval: false
+ constant 353 idj_14_3
+eval: false
+ constant 354 ish_10_6
+eval: false
+ constant 355 ish_16_14
+eval: false
+ constant 356 idj_6_0
+eval: false
+ constant 357 smt_conv::smt_conv::_loaded_val_00_intvar
+eval: 2
+ constant 358 idj_2_9
+eval: false
+ constant 359 idj_4_10
+eval: false
+ constant 360 ish_4_1
+eval: false
+ constant 361 f_th_boolvar0
+eval: true
+ constant 362 idj_2_12
+eval: false
+ constant 363 idj_0_9
+eval: false
+ constant 364 ish_16_6
+eval: false
+ constant 365 idj_14_0
+eval: false
+ constant 366 idj_14_8
+eval: false
+ constant 367 ish_8_11
+eval: false
+ constant 368 ish_4_15
+eval: false
+ constant 369 idj_6_2
+eval: false
+ constant 370 ish_16_2
+eval: false
+ constant 371 ish_1_1
+eval: true
+ constant 372 ish_12_7
+eval: false
+ constant 373 ish_9_15
+eval: false
+ constant 374 smt_conv::smt_conv::_loaded_val_10_intvar
+eval: 2
+ constant 375 ish_2_12
+eval: false
+ constant 376 ish_8_6
+eval: false
+ constant 377 idj_3_9
+eval: false
+ constant 378 idj_1_4
+eval: false
+ constant 379 idj_12_13
+eval: true
+ constant 380 idj_16_10
+eval: false
+ constant 381 ish_14_11
+eval: false
+ constant 382 ish_5_7
+eval: false
+ constant 383 idj_13_2
+eval: false
+ constant 384 ish_4_14
+eval: false
+ constant 385 ish_10_14
+eval: false
+ constant 386 ish_12_14
+eval: false
+ constant 387 ish_5_3
+eval: false
+ constant 388 ish_5_10
+eval: false
+ constant 389 idj_0_4
+eval: false
+ constant 390 ish_6_6
+eval: true
+ constant 391 ish_3_9
+eval: false
+ constant 392 idj_6_14
+eval: false
+ constant 393 idj_16_16
+eval: false
+ constant 394 ish_9_3
+eval: false
+ constant 395 ish_13_14
+eval: false
+ constant 396 idj_11_2
+eval: false
+ constant 397 f_th_boolvar1
+eval: true
+ constant 398 ish_3_13
+eval: false
+ constant 399 ish_9_2
+eval: false
+ constant 400 smt_conv::smt_conv::tmp_loc::00_intvar
+eval: 3
+ constant 401 idj_1_0
+eval: false
+ constant 402 ish_0_7
+eval: false
+ constant 403 idj_9_11
+eval: false
+ constant 404 idj_14_16
+eval: false
+ constant 405 ish_1_15
+eval: true
+ constant 406 ish_2_3
+eval: true
+ constant 407 idj_4_3
+eval: true
+ constant 408 idj_11_3
+eval: false
+ constant 409 idj_13_0
+eval: false
+ constant 410 ish_14_13
+eval: false
+ constant 411 ish_10_12
+eval: false
+ constant 412 idj_6_11
+eval: false
+ constant 413 idj_10_16
+eval: false
+ constant 414 idj_13_14
+eval: true
+ constant 415 ish_6_4
+eval: false
+ constant 416 idj_12_14
+eval: false
+ constant 417 idj_1_9
+eval: false
+ constant 418 ish_8_9
+eval: false
+ constant 419 idj_1_6
+eval: false
+ constant 420 ish_10_11
+eval: false
+ constant 421 idj_14_9
+eval: false
+ constant 422 ish_5_5
+eval: true
+ constant 423 ish_7_0
+eval: false
+ constant 424 idj_8_16
+eval: false
+ constant 425 ish_13_12
+eval: false
+ constant 426 ish_3_15
+eval: false
+ constant 427 ish_14_3
+eval: true
+ constant 428 idj_4_4
+eval: false
+ constant 429 ish_14_1
+eval: false
+ constant 430 ish_8_10
+eval: false
+ constant 431 idj_0_1
+eval: false
+ constant 432 ish_7_9
+eval: false
+ constant 433 idj_8_13
+eval: false
+ constant 434 idj_1_3
+eval: false
+ constant 435 idj_8_9
+eval: false
+ constant 436 ish_4_10
+eval: true
+ constant 437 ish_9_11
+eval: false
+ constant 438 ish_10_16
+eval: false
+ constant 439 ish_13_15
+eval: false
+ constant 440 ish_14_8
+eval: true
+ constant 441 idj_9_4
+eval: false
+ constant 442 ish_6_8
+eval: false
+ constant 443 ish_2_5
+eval: false
+ constant 444 ish_5_11
+eval: false
+ constant 445 ish_15_15
+eval: true
+ constant 446 ish_14_12
+eval: false
+ constant 447 idj_12_4
+eval: false
+ constant 448 ish_2_8
+eval: false
+ constant 449 idj_16_13
+eval: false
+ constant 450 idj_11_11
+eval: false
+ constant 451 idj_0_6
+eval: false
+ constant 452 idj_10_2
+eval: false
+ constant 453 symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+eval: 2
+translated model over
+===== valuation result:
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+execution_statet::\guard_exec?0!0
+f_th_boolvar0
+f_th_boolvar1
+goto_symex::guard?0!0&0#2
+idj_0_0
+idj_0_1
+idj_0_10
+idj_0_11
+idj_0_12
+idj_0_13
+idj_0_14
+idj_0_16
+idj_0_2
+idj_0_3
+idj_0_4
+idj_0_6
+idj_0_8
+idj_0_9
+idj_10_0
+idj_10_1
+idj_10_10
+idj_10_11
+idj_10_12
+idj_10_13
+idj_10_14
+idj_10_16
+idj_10_2
+idj_10_3
+idj_10_4
+idj_10_6
+idj_10_8
+idj_10_9
+idj_11_0
+idj_11_1
+idj_11_10
+idj_11_11
+idj_11_12
+idj_11_13
+idj_11_14
+idj_11_16
+idj_11_2
+idj_11_3
+idj_11_4
+idj_11_6
+idj_11_8
+idj_11_9
+idj_12_0
+idj_12_1
+idj_12_10
+idj_12_11
+idj_12_12
+idj_12_13
+idj_12_14
+idj_12_16
+idj_12_2
+idj_12_3
+idj_12_4
+idj_12_6
+idj_12_8
+idj_12_9
+idj_13_0
+idj_13_1
+idj_13_10
+idj_13_11
+idj_13_12
+idj_13_13
+idj_13_14
+idj_13_16
+idj_13_2
+idj_13_3
+idj_13_4
+idj_13_6
+idj_13_8
+idj_13_9
+idj_14_0
+idj_14_1
+idj_14_10
+idj_14_11
+idj_14_12
+idj_14_13
+idj_14_14
+idj_14_16
+idj_14_2
+idj_14_3
+idj_14_4
+idj_14_6
+idj_14_8
+idj_14_9
+idj_16_0
+idj_16_1
+idj_16_10
+idj_16_11
+idj_16_12
+idj_16_13
+idj_16_14
+idj_16_16
+idj_16_2
+idj_16_3
+idj_16_4
+idj_16_6
+idj_16_8
+idj_16_9
+idj_1_0
+idj_1_1
+idj_1_10
+idj_1_11
+idj_1_12
+idj_1_13
+idj_1_14
+idj_1_16
+idj_1_2
+idj_1_3
+idj_1_4
+idj_1_6
+idj_1_8
+idj_1_9
+idj_2_0
+idj_2_1
+idj_2_10
+idj_2_11
+idj_2_12
+idj_2_13
+idj_2_14
+idj_2_16
+idj_2_2
+idj_2_3
+idj_2_4
+idj_2_6
+idj_2_8
+idj_2_9
+idj_3_0
+idj_3_1
+idj_3_10
+idj_3_11
+idj_3_12
+idj_3_13
+idj_3_14
+idj_3_16
+idj_3_2
+idj_3_3
+idj_3_4
+idj_3_6
+idj_3_8
+idj_3_9
+idj_4_0
+idj_4_1
+idj_4_10
+idj_4_11
+idj_4_12
+idj_4_13
+idj_4_14
+idj_4_16
+idj_4_2
+idj_4_3
+idj_4_4
+idj_4_6
+idj_4_8
+idj_4_9
+idj_6_0
+idj_6_1
+idj_6_10
+idj_6_11
+idj_6_12
+idj_6_13
+idj_6_14
+idj_6_16
+idj_6_2
+idj_6_3
+idj_6_4
+idj_6_6
+idj_6_8
+idj_6_9
+idj_8_0
+idj_8_1
+idj_8_10
+idj_8_11
+idj_8_12
+idj_8_13
+idj_8_14
+idj_8_16
+idj_8_2
+idj_8_3
+idj_8_4
+idj_8_6
+idj_8_8
+idj_8_9
+idj_9_0
+idj_9_1
+idj_9_10
+idj_9_11
+idj_9_12
+idj_9_13
+idj_9_14
+idj_9_16
+idj_9_2
+idj_9_3
+idj_9_4
+idj_9_6
+idj_9_8
+idj_9_9
+ish_0_0
+ish_0_1
+ish_0_10
+ish_0_11
+ish_0_12
+ish_0_13
+ish_0_14
+ish_0_15
+ish_0_16
+ish_0_2
+ish_0_3
+ish_0_4
+ish_0_5
+ish_0_6
+ish_0_7
+ish_0_8
+ish_0_9
+ish_10_0
+ish_10_1
+ish_10_10
+ish_10_11
+ish_10_12
+ish_10_13
+ish_10_14
+ish_10_15
+ish_10_16
+ish_10_2
+ish_10_3
+ish_10_4
+ish_10_5
+ish_10_6
+ish_10_7
+ish_10_8
+ish_10_9
+ish_11_11
+ish_11_15
+ish_11_16
+ish_12_0
+ish_12_1
+ish_12_10
+ish_12_11
+ish_12_12
+ish_12_13
+ish_12_14
+ish_12_15
+ish_12_16
+ish_12_2
+ish_12_3
+ish_12_4
+ish_12_5
+ish_12_6
+ish_12_7
+ish_12_8
+ish_12_9
+ish_13_0
+ish_13_1
+ish_13_11
+ish_13_12
+ish_13_13
+ish_13_14
+ish_13_15
+ish_13_16
+ish_13_2
+ish_13_3
+ish_13_5
+ish_13_7
+ish_13_8
+ish_14_0
+ish_14_1
+ish_14_10
+ish_14_11
+ish_14_12
+ish_14_13
+ish_14_14
+ish_14_15
+ish_14_16
+ish_14_2
+ish_14_3
+ish_14_4
+ish_14_5
+ish_14_6
+ish_14_7
+ish_14_8
+ish_14_9
+ish_15_1
+ish_15_11
+ish_15_15
+ish_16_0
+ish_16_1
+ish_16_10
+ish_16_11
+ish_16_12
+ish_16_13
+ish_16_14
+ish_16_15
+ish_16_16
+ish_16_2
+ish_16_3
+ish_16_4
+ish_16_5
+ish_16_6
+ish_16_7
+ish_16_8
+ish_16_9
+ish_1_1
+ish_1_15
+ish_1_16
+ish_2_0
+ish_2_1
+ish_2_10
+ish_2_11
+ish_2_12
+ish_2_13
+ish_2_14
+ish_2_15
+ish_2_16
+ish_2_2
+ish_2_3
+ish_2_4
+ish_2_5
+ish_2_6
+ish_2_7
+ish_2_8
+ish_2_9
+ish_3_0
+ish_3_1
+ish_3_10
+ish_3_11
+ish_3_12
+ish_3_13
+ish_3_14
+ish_3_15
+ish_3_16
+ish_3_2
+ish_3_3
+ish_3_4
+ish_3_5
+ish_3_6
+ish_3_7
+ish_3_8
+ish_3_9
+ish_4_0
+ish_4_1
+ish_4_10
+ish_4_11
+ish_4_12
+ish_4_13
+ish_4_14
+ish_4_15
+ish_4_16
+ish_4_2
+ish_4_3
+ish_4_4
+ish_4_5
+ish_4_6
+ish_4_7
+ish_4_8
+ish_4_9
+ish_5_0
+ish_5_1
+ish_5_10
+ish_5_11
+ish_5_12
+ish_5_13
+ish_5_14
+ish_5_15
+ish_5_16
+ish_5_2
+ish_5_3
+ish_5_4
+ish_5_5
+ish_5_6
+ish_5_7
+ish_5_8
+ish_5_9
+ish_6_0
+ish_6_1
+ish_6_10
+ish_6_11
+ish_6_12
+ish_6_13
+ish_6_14
+ish_6_15
+ish_6_16
+ish_6_2
+ish_6_3
+ish_6_4
+ish_6_5
+ish_6_6
+ish_6_7
+ish_6_8
+ish_6_9
+ish_7_0
+ish_7_1
+ish_7_10
+ish_7_11
+ish_7_12
+ish_7_13
+ish_7_14
+ish_7_15
+ish_7_16
+ish_7_2
+ish_7_3
+ish_7_4
+ish_7_5
+ish_7_6
+ish_7_7
+ish_7_8
+ish_7_9
+ish_8_0
+ish_8_1
+ish_8_10
+ish_8_11
+ish_8_12
+ish_8_13
+ish_8_14
+ish_8_15
+ish_8_16
+ish_8_2
+ish_8_3
+ish_8_4
+ish_8_5
+ish_8_6
+ish_8_7
+ish_8_8
+ish_8_9
+ish_9_0
+ish_9_1
+ish_9_10
+ish_9_11
+ish_9_12
+ish_9_13
+ish_9_14
+ish_9_15
+ish_9_16
+ish_9_2
+ish_9_3
+ish_9_4
+ish_9_5
+ish_9_6
+ish_9_7
+ish_9_8
+ish_9_9
+nondet$symex::nondet1
+nondet$symex::nondet3
+smt_conv::smt_conv::_loaded_val_00_intvar
+int val for smt_conv::smt_conv::_loaded_val_00_intvar  val 2
+smt_conv::smt_conv::_loaded_val_00
+
+smt_conv::smt_conv::_loaded_val_10_intvar
+int val for smt_conv::smt_conv::_loaded_val_10_intvar  val 2
+smt_conv::smt_conv::_loaded_val_10
+
+smt_conv::smt_conv::_tmp_val_00_intvar
+int val for smt_conv::smt_conv::_tmp_val_00_intvar  val 3
+smt_conv::smt_conv::_tmp_val_00
+
+smt_conv::smt_conv::tmp_loc::00_intvar
+int val for smt_conv::smt_conv::tmp_loc::00_intvar  val 3
+smt_conv::smt_conv::tmp_loc::00
+
+smt_conv::smt_conv::tmp_loc::10_intvar
+int val for smt_conv::smt_conv::tmp_loc::10_intvar  val 4
+smt_conv::smt_conv::tmp_loc::10
+
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar  val 1
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar  val 2
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+
+model info recorded: 
+model subsume info size: 13
+------- main
+( |symex_dynamic::dynamic_heap_1&0#3| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#6| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#4| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_3&0#4| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_loaded_val_00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_3&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+locvar vals: 
+smt_conv::smt_conv::_loaded_val_00 2
+smt_conv::smt_conv::_loaded_val_10 2
+smt_conv::smt_conv::_tmp_val_00 3
+smt_conv::smt_conv::tmp_loc::00 3
+smt_conv::smt_conv::tmp_loc::10 4
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0 1
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0 2
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 12 with solver Z3-slhv
+Runtime decision procedure: 0.016s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 25 column 9 function main
+Comment: dereference failure: invalid free pointer
+Property: INVALID_FREE Result: sat Time: 0.016s
+--------------------------------- Result -----------------------------------
+
+Slicing time: 0.000s (removed 13 assignments)
+Encoding remaining VCC(s) using SLHV
+Encoding to solver time: 0.001s
+Number of heap terms: 14
+Number of aht: 11
+Number of locvars: 6
+begin generate deduced assumptions disj
+lia assertion size: 2982
+XXXXXXXXXXXXXXXXX translated constraint result XXXXXXXXXXXXXXXXXXX
+translated model: 
+ constant 0 idj_7_3
+eval: false
+ constant 1 idj_0_12
+eval: false
+ constant 2 ish_11_6
+eval: true
+ constant 3 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+eval: false
+ constant 4 ish_3_2
+eval: false
+ constant 5 ish_5_4
+eval: false
+ constant 6 ish_9_6
+eval: false
+ constant 7 ish_9_7
+eval: false
+ constant 8 idj_7_0
+eval: false
+ constant 9 ish_2_13
+eval: false
+ constant 10 ish_13_13
+eval: true
+ constant 11 ish_0_8
+eval: false
+ constant 12 idj_11_0
+eval: false
+ constant 13 idj_8_7
+eval: false
+ constant 14 ish_8_7
+eval: true
+ constant 15 ish_12_6
+eval: false
+ constant 16 idj_11_7
+eval: false
+ constant 17 ish_2_2
+eval: true
+ constant 18 ish_5_9
+eval: false
+ constant 19 smt_conv::smt_conv::tmp_loc::10_intvar
+eval: 0
+ constant 20 ish_13_3
+eval: false
+ constant 21 ish_6_2
+eval: true
+ constant 22 ish_11_11
+eval: true
+ constant 23 idj_6_13
+eval: false
+ constant 24 idj_11_6
+eval: false
+ constant 25 idj_10_0
+eval: false
+ constant 26 idj_10_3
+eval: false
+ constant 27 idj_8_12
+eval: false
+ constant 28 ish_3_1
+eval: false
+ constant 29 idj_7_7
+eval: false
+ constant 30 idj_12_8
+eval: false
+ constant 31 idj_8_6
+eval: false
+ constant 32 ish_10_2
+eval: true
+ constant 33 idj_12_6
+eval: false
+ constant 34 ish_3_0
+eval: false
+ constant 35 idj_7_13
+eval: false
+ constant 36 idj_0_10
+eval: false
+ constant 37 ish_2_6
+eval: true
+ constant 38 idj_6_12
+eval: false
+ constant 39 idj_0_0
+eval: false
+ constant 40 ish_10_13
+eval: false
+ constant 41 idj_3_11
+eval: false
+ constant 42 ish_11_4
+eval: false
+ constant 43 idj_0_11
+eval: false
+ constant 44 ish_11_12
+eval: false
+ constant 45 idj_6_9
+eval: false
+ constant 46 ish_3_12
+eval: true
+ constant 47 idj_10_9
+eval: false
+ constant 48 idj_11_8
+eval: false
+ constant 49 idj_3_13
+eval: false
+ constant 50 idj_10_7
+eval: false
+ constant 51 ish_12_2
+eval: false
+ constant 52 ish_8_2
+eval: false
+ constant 53 ish_11_9
+eval: false
+ constant 54 ish_7_2
+eval: false
+ constant 55 idj_13_12
+eval: false
+ constant 56 idj_9_7
+eval: false
+ constant 57 idj_13_6
+eval: false
+ constant 58 ish_7_6
+eval: false
+ constant 59 ish_6_9
+eval: false
+ constant 60 ish_2_10
+eval: false
+ constant 61 idj_9_8
+eval: false
+ constant 62 idj_9_10
+eval: false
+ constant 63 ish_12_12
+eval: true
+ constant 64 ish_3_7
+eval: true
+ constant 65 ish_6_3
+eval: false
+ constant 66 ish_13_2
+eval: true
+ constant 67 ish_11_2
+eval: false
+ constant 68 ish_13_11
+eval: true
+ constant 69 ish_8_4
+eval: false
+ constant 70 idj_6_7
+eval: false
+ constant 71 ish_12_1
+eval: false
+ constant 72 ish_5_0
+eval: false
+ constant 73 ish_6_11
+eval: true
+ constant 74 ish_3_11
+eval: false
+ constant 75 idj_9_0
+eval: false
+ constant 76 ish_8_3
+eval: true
+ constant 77 idj_8_3
+eval: false
+ constant 78 ish_3_5
+eval: true
+ constant 79 ish_11_0
+eval: false
+ constant 80 nondet$symex::nondet3
+eval: false
+ constant 81 ish_8_8
+eval: true
+ constant 82 ish_4_4
+eval: true
+ constant 83 idj_9_13
+eval: false
+ constant 84 ish_0_1
+eval: false
+ constant 85 ish_7_7
+eval: true
+ constant 86 ish_6_10
+eval: false
+ constant 87 goto_symex::guard?0!0&0#2
+eval: true
+ constant 88 ish_0_5
+eval: false
+ constant 89 idj_13_8
+eval: false
+ constant 90 idj_8_11
+eval: false
+ constant 91 idj_12_0
+eval: false
+ constant 92 nondet$symex::nondet1
+eval: false
+ constant 93 idj_0_3
+eval: false
+ constant 94 ish_8_0
+eval: false
+ constant 95 ish_8_5
+eval: true
+ constant 96 ish_7_3
+eval: false
+ constant 97 ish_10_3
+eval: false
+ constant 98 ish_12_5
+eval: true
+ constant 99 ish_12_0
+eval: false
+ constant 100 ish_7_12
+eval: false
+ constant 101 idj_12_7
+eval: false
+ constant 102 ish_2_4
+eval: false
+ constant 103 ish_10_10
+eval: true
+ constant 104 ish_2_7
+eval: false
+ constant 105 idj_13_7
+eval: false
+ constant 106 idj_3_3
+eval: false
+ constant 107 ish_7_1
+eval: false
+ constant 108 ish_9_10
+eval: false
+ constant 109 ish_12_9
+eval: false
+ constant 110 idj_0_13
+eval: false
+ constant 111 ish_12_11
+eval: false
+ constant 112 ish_11_7
+eval: false
+ constant 113 ish_10_7
+eval: false
+ constant 114 ish_7_8
+eval: true
+ constant 115 ish_2_9
+eval: false
+ constant 116 ish_5_2
+eval: false
+ constant 117 ish_9_8
+eval: false
+ constant 118 ish_10_4
+eval: false
+ constant 119 ish_5_6
+eval: false
+ constant 120 ish_6_12
+eval: false
+ constant 121 idj_6_6
+eval: false
+ constant 122 idj_6_3
+eval: false
+ constant 123 idj_11_12
+eval: false
+ constant 124 ish_9_13
+eval: false
+ constant 125 ish_0_4
+eval: false
+ constant 126 symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+eval: 3
+ constant 127 ish_7_4
+eval: false
+ constant 128 idj_13_3
+eval: false
+ constant 129 ish_13_10
+eval: false
+ constant 130 ish_13_5
+eval: false
+ constant 131 idj_7_6
+eval: false
+ constant 132 idj_8_8
+eval: false
+ constant 133 ish_7_5
+eval: false
+ constant 134 ish_2_1
+eval: false
+ constant 135 ish_3_6
+eval: false
+ constant 136 ish_5_1
+eval: false
+ constant 137 idj_0_8
+eval: true
+ constant 138 ish_0_9
+eval: true
+ constant 139 ish_10_5
+eval: true
+ constant 140 ish_6_0
+eval: false
+ constant 141 ish_5_12
+eval: false
+ constant 142 idj_3_12
+eval: false
+ constant 143 ish_6_5
+eval: false
+ constant 144 idj_11_13
+eval: false
+ constant 145 idj_3_8
+eval: false
+ constant 146 ish_7_13
+eval: false
+ constant 147 ish_13_4
+eval: false
+ constant 148 ish_0_3
+eval: false
+ constant 149 ish_9_9
+eval: true
+ constant 150 ish_10_1
+eval: false
+ constant 151 idj_10_13
+eval: true
+ constant 152 ish_7_11
+eval: false
+ constant 153 ish_9_1
+eval: false
+ constant 154 smt_conv::smt_conv::_tmp_val_00_intvar
+eval: 1
+ constant 155 ish_9_4
+eval: false
+ constant 156 ish_0_11
+eval: false
+ constant 157 idj_11_9
+eval: false
+ constant 158 ish_0_6
+eval: false
+ constant 159 ish_7_10
+eval: false
+ constant 160 idj_12_3
+eval: false
+ constant 161 ish_13_7
+eval: false
+ constant 162 idj_7_8
+eval: false
+ constant 163 ish_3_4
+eval: false
+ constant 164 idj_9_6
+eval: false
+ constant 165 idj_9_12
+eval: true
+ constant 166 ish_12_3
+eval: true
+ constant 167 idj_13_10
+eval: true
+ constant 168 c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+eval: false
+ constant 169 idj_7_11
+eval: false
+ constant 170 ish_10_6
+eval: false
+ constant 171 idj_6_0
+eval: false
+ constant 172 ish_11_8
+eval: false
+ constant 173 idj_3_0
+eval: false
+ constant 174 ish_4_1
+eval: true
+ constant 175 ish_11_10
+eval: false
+ constant 176 idj_10_8
+eval: false
+ constant 177 idj_12_12
+eval: false
+ constant 178 idj_3_10
+eval: false
+ constant 179 idj_0_9
+eval: false
+ constant 180 ish_13_6
+eval: true
+ constant 181 ish_8_11
+eval: false
+ constant 182 idj_3_6
+eval: false
+ constant 183 idj_13_11
+eval: false
+ constant 184 idj_7_9
+eval: false
+ constant 185 ish_1_1
+eval: true
+ constant 186 idj_12_10
+eval: true
+ constant 187 idj_13_9
+eval: false
+ constant 188 ish_12_7
+eval: true
+ constant 189 ish_6_13
+eval: false
+ constant 190 ish_2_12
+eval: false
+ constant 191 ish_8_6
+eval: false
+ constant 192 idj_12_9
+eval: true
+ constant 193 idj_3_9
+eval: true
+ constant 194 ish_9_5
+eval: false
+ constant 195 idj_12_13
+eval: false
+ constant 196 idj_6_8
+eval: false
+ constant 197 ish_5_8
+eval: true
+ constant 198 ish_11_3
+eval: false
+ constant 199 idj_3_7
+eval: false
+ constant 200 ish_5_7
+eval: false
+ constant 201 ish_1_4
+eval: true
+ constant 202 idj_7_12
+eval: false
+ constant 203 ish_5_13
+eval: false
+ constant 204 idj_12_11
+eval: false
+ constant 205 ish_3_3
+eval: true
+ constant 206 idj_6_10
+eval: false
+ constant 207 ish_5_3
+eval: false
+ constant 208 idj_9_3
+eval: true
+ constant 209 ish_0_0
+eval: true
+ constant 210 idj_10_12
+eval: true
+ constant 211 ish_9_3
+eval: false
+ constant 212 ish_6_6
+eval: true
+ constant 213 execution_statet::\guard_exec?0!0
+eval: true
+ constant 214 idj_8_0
+eval: true
+ constant 215 ish_2_11
+eval: false
+ constant 216 ish_5_10
+eval: false
+ constant 217 idj_10_11
+eval: false
+ constant 218 ish_12_10
+eval: false
+ constant 219 ish_3_9
+eval: false
+ constant 220 ish_3_13
+eval: false
+ constant 221 ish_6_1
+eval: false
+ constant 222 ish_9_12
+eval: false
+ constant 223 ish_9_2
+eval: false
+ constant 224 smt_conv::smt_conv::tmp_loc::00_intvar
+eval: 1
+ constant 225 ish_0_12
+eval: false
+ constant 226 idj_9_11
+eval: false
+ constant 227 idj_13_13
+eval: false
+ constant 228 ish_10_8
+eval: false
+ constant 229 ish_0_7
+eval: false
+ constant 230 ish_8_13
+eval: false
+ constant 231 ish_3_8
+eval: true
+ constant 232 idj_7_10
+eval: false
+ constant 233 ish_2_3
+eval: false
+ constant 234 idj_13_0
+eval: false
+ constant 235 idj_11_3
+eval: false
+ constant 236 ish_12_4
+eval: false
+ constant 237 idj_6_11
+eval: false
+ constant 238 ish_10_12
+eval: false
+ constant 239 ish_6_4
+eval: false
+ constant 240 idj_10_6
+eval: false
+ constant 241 ish_11_1
+eval: false
+ constant 242 ish_0_13
+eval: false
+ constant 243 ish_13_1
+eval: false
+ constant 244 ish_11_5
+eval: false
+ constant 245 ish_8_9
+eval: false
+ constant 246 ish_10_11
+eval: false
+ constant 247 ish_5_5
+eval: true
+ constant 248 ish_12_13
+eval: false
+ constant 249 ish_7_0
+eval: false
+ constant 250 ish_13_12
+eval: false
+ constant 251 ish_3_10
+eval: false
+ constant 252 ish_8_10
+eval: false
+ constant 253 idj_11_10
+eval: false
+ constant 254 ish_7_9
+eval: false
+ constant 255 idj_8_13
+eval: false
+ constant 256 ish_9_11
+eval: false
+ constant 257 ish_6_7
+eval: false
+ constant 258 idj_8_9
+eval: false
+ constant 259 ish_8_12
+eval: false
+ constant 260 ish_0_10
+eval: false
+ constant 261 idj_10_10
+eval: false
+ constant 262 ish_2_0
+eval: false
+ constant 263 idj_0_7
+eval: false
+ constant 264 ish_0_2
+eval: false
+ constant 265 ish_6_8
+eval: false
+ constant 266 ish_8_1
+eval: false
+ constant 267 ish_2_5
+eval: false
+ constant 268 ish_5_11
+eval: false
+ constant 269 ish_13_0
+eval: false
+ constant 270 ish_13_8
+eval: false
+ constant 271 ish_11_13
+eval: false
+ constant 272 idj_8_10
+eval: false
+ constant 273 ish_12_8
+eval: true
+ constant 274 ish_2_8
+eval: false
+ constant 275 idj_11_11
+eval: false
+ constant 276 ish_13_9
+eval: false
+ constant 277 idj_0_6
+eval: false
+ constant 278 ish_9_0
+eval: true
+ constant 279 symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+eval: 2
+ constant 280 idj_9_9
+eval: false
+translated model over
+===== valuation result:
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$2?1!0&0#1
+c:@F@main::$tmp::return_value$___VERIFIER_nondet_bool$4?1!0&0#1
+execution_statet::\guard_exec?0!0
+goto_symex::guard?0!0&0#2
+idj_0_0
+idj_0_10
+idj_0_11
+idj_0_12
+idj_0_13
+idj_0_3
+idj_0_6
+idj_0_7
+idj_0_8
+idj_0_9
+idj_10_0
+idj_10_10
+idj_10_11
+idj_10_12
+idj_10_13
+idj_10_3
+idj_10_6
+idj_10_7
+idj_10_8
+idj_10_9
+idj_11_0
+idj_11_10
+idj_11_11
+idj_11_12
+idj_11_13
+idj_11_3
+idj_11_6
+idj_11_7
+idj_11_8
+idj_11_9
+idj_12_0
+idj_12_10
+idj_12_11
+idj_12_12
+idj_12_13
+idj_12_3
+idj_12_6
+idj_12_7
+idj_12_8
+idj_12_9
+idj_13_0
+idj_13_10
+idj_13_11
+idj_13_12
+idj_13_13
+idj_13_3
+idj_13_6
+idj_13_7
+idj_13_8
+idj_13_9
+idj_3_0
+idj_3_10
+idj_3_11
+idj_3_12
+idj_3_13
+idj_3_3
+idj_3_6
+idj_3_7
+idj_3_8
+idj_3_9
+idj_6_0
+idj_6_10
+idj_6_11
+idj_6_12
+idj_6_13
+idj_6_3
+idj_6_6
+idj_6_7
+idj_6_8
+idj_6_9
+idj_7_0
+idj_7_10
+idj_7_11
+idj_7_12
+idj_7_13
+idj_7_3
+idj_7_6
+idj_7_7
+idj_7_8
+idj_7_9
+idj_8_0
+idj_8_10
+idj_8_11
+idj_8_12
+idj_8_13
+idj_8_3
+idj_8_6
+idj_8_7
+idj_8_8
+idj_8_9
+idj_9_0
+idj_9_10
+idj_9_11
+idj_9_12
+idj_9_13
+idj_9_3
+idj_9_6
+idj_9_7
+idj_9_8
+idj_9_9
+ish_0_0
+ish_0_1
+ish_0_10
+ish_0_11
+ish_0_12
+ish_0_13
+ish_0_2
+ish_0_3
+ish_0_4
+ish_0_5
+ish_0_6
+ish_0_7
+ish_0_8
+ish_0_9
+ish_10_1
+ish_10_10
+ish_10_11
+ish_10_12
+ish_10_13
+ish_10_2
+ish_10_3
+ish_10_4
+ish_10_5
+ish_10_6
+ish_10_7
+ish_10_8
+ish_11_0
+ish_11_1
+ish_11_10
+ish_11_11
+ish_11_12
+ish_11_13
+ish_11_2
+ish_11_3
+ish_11_4
+ish_11_5
+ish_11_6
+ish_11_7
+ish_11_8
+ish_11_9
+ish_12_0
+ish_12_1
+ish_12_10
+ish_12_11
+ish_12_12
+ish_12_13
+ish_12_2
+ish_12_3
+ish_12_4
+ish_12_5
+ish_12_6
+ish_12_7
+ish_12_8
+ish_12_9
+ish_13_0
+ish_13_1
+ish_13_10
+ish_13_11
+ish_13_12
+ish_13_13
+ish_13_2
+ish_13_3
+ish_13_4
+ish_13_5
+ish_13_6
+ish_13_7
+ish_13_8
+ish_13_9
+ish_1_1
+ish_1_4
+ish_2_0
+ish_2_1
+ish_2_10
+ish_2_11
+ish_2_12
+ish_2_13
+ish_2_2
+ish_2_3
+ish_2_4
+ish_2_5
+ish_2_6
+ish_2_7
+ish_2_8
+ish_2_9
+ish_3_0
+ish_3_1
+ish_3_10
+ish_3_11
+ish_3_12
+ish_3_13
+ish_3_2
+ish_3_3
+ish_3_4
+ish_3_5
+ish_3_6
+ish_3_7
+ish_3_8
+ish_3_9
+ish_4_1
+ish_4_4
+ish_5_0
+ish_5_1
+ish_5_10
+ish_5_11
+ish_5_12
+ish_5_13
+ish_5_2
+ish_5_3
+ish_5_4
+ish_5_5
+ish_5_6
+ish_5_7
+ish_5_8
+ish_5_9
+ish_6_0
+ish_6_1
+ish_6_10
+ish_6_11
+ish_6_12
+ish_6_13
+ish_6_2
+ish_6_3
+ish_6_4
+ish_6_5
+ish_6_6
+ish_6_7
+ish_6_8
+ish_6_9
+ish_7_0
+ish_7_1
+ish_7_10
+ish_7_11
+ish_7_12
+ish_7_13
+ish_7_2
+ish_7_3
+ish_7_4
+ish_7_5
+ish_7_6
+ish_7_7
+ish_7_8
+ish_7_9
+ish_8_0
+ish_8_1
+ish_8_10
+ish_8_11
+ish_8_12
+ish_8_13
+ish_8_2
+ish_8_3
+ish_8_4
+ish_8_5
+ish_8_6
+ish_8_7
+ish_8_8
+ish_8_9
+ish_9_0
+ish_9_1
+ish_9_10
+ish_9_11
+ish_9_12
+ish_9_13
+ish_9_2
+ish_9_3
+ish_9_4
+ish_9_5
+ish_9_6
+ish_9_7
+ish_9_8
+ish_9_9
+nondet$symex::nondet1
+nondet$symex::nondet3
+smt_conv::smt_conv::_tmp_val_00_intvar
+int val for smt_conv::smt_conv::_tmp_val_00_intvar  val 1
+smt_conv::smt_conv::_tmp_val_00
+
+smt_conv::smt_conv::tmp_loc::00_intvar
+int val for smt_conv::smt_conv::tmp_loc::00_intvar  val 1
+smt_conv::smt_conv::tmp_loc::00
+
+smt_conv::smt_conv::tmp_loc::10_intvar
+int val for smt_conv::smt_conv::tmp_loc::10_intvar  val 0
+smt_conv::smt_conv::tmp_loc::10
+
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_1_loc&0#0_intvar  val 3
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0
+
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar
+int val for symex_location::symex_dynamic::dynamic_heap_3_loc&0#0_intvar  val 2
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0
+
+model info recorded: 
+model subsume info size: 11
+------- main
+( |symex_dynamic::dynamic_heap_1&0#4| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#3| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_3&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | |smt_conv::smt_conv::_tmp_heap_00| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#1| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::00|)) | )
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::_tmp_val_00|)) | )
+------- main
+( |symex_dynamic::dynamic_heap_1&0#6| | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_1_loc&0#0|
+    (Pt_R_0 |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|)) | )
+------- main
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+------- subs
+( (pt |symex_location::symex_dynamic::dynamic_heap_3_loc&0#0|
+    (Pt_R_0 |smt_conv::smt_conv::tmp_loc::10|)) | )
+locvar vals: 
+smt_conv::smt_conv::_tmp_val_00 1
+smt_conv::smt_conv::tmp_loc::00 1
+smt_conv::smt_conv::tmp_loc::10 0
+symex_location::symex_dynamic::dynamic_heap_1_loc&0#0 3
+symex_location::symex_dynamic::dynamic_heap_3_loc&0#0 2
+free heap vars:
+FINAL CHECK DONE
+init model for slhv: arith factory, locvar_factory and heap factory
+Solving claim 13 with solver Z3-slhv
+Runtime decision procedure: 0.007s
+--------------------------------- Result -----------------------------------
+Location: file global-atexit-5.c line 25 column 9 function main
+Comment: dereference failure: invalid dereference pointer
+Property: INVALID_DEREF Result: sat Time: 0.007s
+--------------------------------- Result -----------------------------------
+
+
+VERIFICATION FAILED
